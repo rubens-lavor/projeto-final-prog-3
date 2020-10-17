@@ -1,16 +1,17 @@
+/*
 #include <iostream>
 #include <stdexcept>
 
 #include "Conta.h"
-#include "Conta.cpp"
-#include "Pessoa.cpp"
-#include "ContaEspecial.cpp"
-#include "ContaComum.cpp"
-#include "ContaPoupanca.cpp"
-#include "Taxa.cpp"
-#include "Transacao.cpp"
-#include "Movimento.cpp"
-#include "Date.cpp"
+#include "Conta.h"
+#include "Pessoa.h"
+#include "ContaEspecial.h"
+#include "ContaComum.h"
+#include "ContaPoupanca.h"
+#include "Taxa.h"
+#include "Transacao.h"
+#include "Movimento.h"
+#include "Date.h"
 
 using namespace std;
 
@@ -66,3 +67,5 @@ int main(){
 
     return 0;
 }
+
+*/
