@@ -1,1 +1,0 @@
-mainUsuarioTeste.o: mainUsuarioTeste.cpp
