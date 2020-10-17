@@ -57,8 +57,6 @@ int main() {
    cout << "E-mail.............: " << c2.getCorrentista().getEmail() << endl;
    */
 
-    // até aqui ta funcionando bem-----------primeira e segunda parte acima----
-
     cout << "--------------------------------------" << endl;
     cout << endl;
     cout << "----------Saques e Depósitos----------" << endl;
@@ -81,8 +79,6 @@ int main() {
     cout << "--Conta Especial-(Limite de crédito)--" << endl;
     cout << endl;
 
-    // até aqui ta funcionando bem-------terceira parte acimma----------------
-
     Pessoa *p3 = new Pessoa("fábio", "fabio@gmail.com");
     ContaEspecial e1(123456, p3, 0.00, 1000);
     cout << "Saldo inicial.............: " << e1.getSaldo() << endl;
@@ -98,7 +94,6 @@ int main() {
     cout << "Limite da conta...........: " << e1.getLimite() << endl;
     cout << "Correntista...............: " << e1.getCorrentista().getNome() << endl;
 
-    // até aqui ta funcionando bem-------quarta parte acima----------------
 
     cout << "--------------------------------------" << endl;
     cout << endl;
@@ -122,11 +117,6 @@ int main() {
     cout << "oi " << c1->getSaldo();
     cout << endl;
 
-    // até aqui ta funcionando bem-------sexta parte acima----------------
-    // realizando uma transação----------------
-
-    //usar p1 (um obj do tipo Pessoa, já instaciado)
-    // c2 (conta ja instanciada)
 
     Transacao t1;
 
