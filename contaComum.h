@@ -1,8 +1,8 @@
 #ifndef CONTACOMUM_H
 #define CONTACOMUM_H
 
-#include "Conta.h"
-#include "Taxa.h"
+#include "conta.h"
+#include "taxa.h"
 
 class ContaComum : public Conta, public Taxa
 {

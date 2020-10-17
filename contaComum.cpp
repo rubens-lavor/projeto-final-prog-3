@@ -1,4 +1,4 @@
-#include "ContaComum.h"
+#include "contaComum.h"
 
 
 /*iniciando o construtor e aproveitando a inialização do 

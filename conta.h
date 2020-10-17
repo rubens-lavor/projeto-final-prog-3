@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-#include "Pessoa.h"
+#include "pessoa.h"
 
 /* 
 A classe Conta define um tipo de dado abstrato

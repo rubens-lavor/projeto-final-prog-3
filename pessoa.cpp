@@ -1,4 +1,4 @@
-#include "Pessoa.h"
+#include "pessoa.h"
 
 Pessoa::Pessoa(/* args */)
 {

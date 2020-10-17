@@ -1,8 +1,8 @@
 #ifndef CONTAESPECIAL_H
 #define CONTAESPECIAL_H
 
-#include "Conta.h"
-#include "Taxa.h" // importa a classe Taxa
+#include "conta.h"
+#include "taxa.h" // importa a classe Taxa
 
 /*
 

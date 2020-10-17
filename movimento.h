@@ -1,8 +1,8 @@
 #ifndef MOVIMENTO_H
 #define MOVIMENTO_H
 
-#include "Conta.h"
-#include "Date.h"
+#include "conta.h"
+#include "date.h"
 
 class Conta;
 class Date;

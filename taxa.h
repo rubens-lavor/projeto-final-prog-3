@@ -3,9 +3,6 @@
 
 using namespace std;
 
-//#include "Conta.h"
-
-//class Conta;
 
 class Taxa
 {

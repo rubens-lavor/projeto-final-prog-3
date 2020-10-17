@@ -2,7 +2,7 @@
 #define TRANSACAO_H
 
 //#include "Date.h"
-#include "Movimento.h"
+#include "movimento.h"
 #include <vector>
 using namespace std;
 class Movimento;
@@ -35,7 +35,7 @@ class Transacao
 {
 private:
     vector <Movimento> movimentos; 
-    //lista de obj do tipo movimento
+    //vetor de obj do tipo movimento
 
 public:
     Transacao(/* args */);

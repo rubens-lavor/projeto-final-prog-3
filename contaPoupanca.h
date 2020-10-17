@@ -1,7 +1,7 @@
 #ifndef CONTAPOUPANCA_H
 #define CONTAPOUPANCA_H
 
-#include "Conta.h"
+#include "conta.h"
 
 class ContaPoupanca: public Conta
 {
