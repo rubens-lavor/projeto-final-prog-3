@@ -30,7 +30,7 @@ void demo_saque_deposito(Conta &a, float valor_saque = 0.0, float valor_deposito
         cout << "Depósito efetuado com sucesso, no valor de: R$" << valor_deposito << endl;
     }
 }
-
+/*
 void demo_saque_deposito2(ContaEspecial &a, float valor_saque = 0.0, float valor_deposito = 0.0) {
     if (a.getTipo() == 3) {
         cout << "--------------------------------------" << endl;
@@ -59,21 +59,58 @@ void demo_saque_deposito2(ContaEspecial &a, float valor_saque = 0.0, float valor
         return;
     }
 }
+*/
 
 void demo_mov(Transacao &t1, Conta &a, int op, float valor, string descricao) {
-    /*
-    cout << "Saldo Atual Inicial: " << a.getSaldo();
-    cout << endl;
-    */
 
-    cout << "movimentações: " << endl;
+    cout << endl;
+    cout << endl;
+    cout << "------------------------------------" << endl;
+    cout << "Movimentações: " << endl;
+    cout << "Valor......: "<< valor << endl;
+    cout << "Operação...: "<< (op?"Depósito":"Saque") << endl;
+    cout << "Conta......: "<< a.getNumero();
 
     float saldo_anterior = a.getSaldo();
+    t1.realizarTransacao(Date(), a, valor, descricao, op, saldo_anterior);
 
-    t1.realizarTransacao(Date(), a, 100, descricao, op, saldo_anterior);
-
-    a.movimentar(100, op);
+    if(a.movimentar(valor, op)){
+        cout << "Operação realizada com sucesso " << endl;
+    }
     cout << endl;
+
+}
+
+void demo_extrato(Transacao &t1, Conta &c, string senha){
+    float saldo_anterior_ = 0;
+    bool validacao = c.validacao(senha);
+    string nome = c.getCorrentista().getNome();
+
+    cout << endl;
+    cout << endl;
+    cout << "------------------------------------" << endl;
+    cout << "Emissão de Extrato da conta de Número: " << c.getNumero();
+    cout << endl;
+    cout << endl;
+    cout << "Correntista...: " << c.getCorrentista().getNome();
+    cout << endl;
+
+    for (Movimento mov : t1.getMovimentos()) {
+        if (mov.getConta().getCorrentista().getNome() == nome && validacao) {
+            cout << endl;
+            cout << "Data..........:" << endl;
+            cout << "Descrição.....:" << mov.getHistorico() << endl;
+            cout << "Valor.........:" << mov.getValor() << endl;
+            cout << "Operação......:" << mov.getOperacao() << endl;
+            saldo_anterior_ = mov.getSaldoAnterior();
+        }
+    }
+    cout << "------------------------------------" << endl;
+    
+    cout << "Saldo Anterior: " << saldo_anterior_;
+    cout << endl;
+    cout << "Saldo Atual: " << c.getSaldo() << endl;
+    
 }
 
 int main() {
@@ -201,7 +238,13 @@ int main() {
 
     Transacao t1;
 
+    //demo_mov(t1,c1,0,150,"pagamento telefone");
+    //demo_mov(t1,c1,0,200,"pagamento luz");
+
     demo_mov(t1,c2,1,500,"transferencia recebida");
+    demo_mov(t1,c2,0,200,"saque");
+
+    //demo_mov(t1,c3,0,500,"saque");
 
     /*
     float salddo_anterior_da_maria = c2.getSaldo();
@@ -237,6 +280,7 @@ int main() {
     //cout << "Saldo Atual Inicial: (atenção nesse ponto 5) " << c2.getSaldo() << endl;
     */
 
+   /*
    float saldo_anterior_ = 0;
 
    for (Movimento mov : t1.getMovimentos()) {
@@ -270,8 +314,13 @@ int main() {
     }
 
     cout << "Saldo Atual: " << c2.getSaldo() << endl;
-
+    */
     //verificar a questão da data
+
+
+    //demo_extrato(t1,c1,"123");
+    demo_extrato(t1,c2,"123");
+    //demo_extrato(t1,c3,"123");
 
     return 0;
 }

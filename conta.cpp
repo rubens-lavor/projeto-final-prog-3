@@ -9,8 +9,6 @@ Conta::Conta(int numero, Pessoa &correntista, float saldo, string _senha):senha(
     contasCriadas++;
     this->setNumero(numero);
     this->correntista = &correntista;
-
-    cout <<correntista.getNome() << " oiiii senhahaaEOCPKCOKCPOEKCOP: " << _senha << endl;
     
     /*
     não preciso chamar a função.. apenas preciso passar
@@ -66,17 +64,17 @@ float Conta::getSaldo(){
 
 void Conta::depositar(float valor){
     this->setSaldo(this->getSaldo() + valor);
-    cout << "Depósito no valor de: R$ "<< valor << endl;
-    cout << "Operação Realizada" << endl;
+    //cout << "Depósito no valor de: R$ "<< valor << endl;
+    //cout << "Operação Realizada" << endl;
     //cout << "Saldo Atual após o depósito: "<< this->getSaldo() <<endl; 
 }
 
 bool Conta::sacar(float valor){
     if (this->getSaldo()>= valor)
     {
-        cout << "Saque no valor de: R$ " << valor << endl; 
+        //cout << "Saque no valor de: R$ " << valor << endl; 
         this->setSaldo(this->getSaldo() - valor);
-        cout << "Operação Realizada" << endl;
+        //cout << "Operação Realizada" << endl;
         //cout << "Saldo Atual após o saque: "<< this->getSaldo() <<endl; 
         return true;
     }else
@@ -112,7 +110,7 @@ bool Conta::movimentar(float valor, int operacao){
    if (operacao == 1) //depositar
    {
         this->depositar(valor);
-        cout << "Operação Depositar realizada com sucesso."<<endl;
+        //cout << "Operação Depositar realizada com sucesso."<<endl;
         return true;
 
    }
@@ -120,7 +118,7 @@ bool Conta::movimentar(float valor, int operacao){
    {
        if (this->sacar(valor))
        {    
-           cout << "Operação Sacar realizada com sucesso."<<endl;
+           //cout << "Operação Sacar realizada com sucesso."<<endl;
            return true;
        }
        else
