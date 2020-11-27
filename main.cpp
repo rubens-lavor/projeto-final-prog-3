@@ -69,7 +69,7 @@ void demo_mov(Transacao &t1, Conta &a, int op, float valor, string descricao) {
     cout << "Movimentações: " << endl;
     cout << "Valor......: "<< valor << endl;
     cout << "Operação...: "<< (op?"Depósito":"Saque") << endl;
-    cout << "Conta......: "<< a.getNumero();
+    cout << "Conta......: "<< a.getNumero()<< endl;
 
     float saldo_anterior = a.getSaldo();
     t1.realizarTransacao(Date(), a, valor, descricao, op, saldo_anterior);
@@ -238,8 +238,8 @@ int main() {
 
     Transacao t1;
 
-    //demo_mov(t1,c1,0,150,"pagamento telefone");
-    //demo_mov(t1,c1,0,200,"pagamento luz");
+    demo_mov(t1,c1,0,150,"pagamento telefone");
+    demo_mov(t1,c1,0,200,"pagamento luz");
 
     demo_mov(t1,c2,1,500,"transferencia recebida");
     demo_mov(t1,c2,0,200,"saque");
@@ -318,9 +318,9 @@ int main() {
     //verificar a questão da data
 
 
-    //demo_extrato(t1,c1,"123");
+    demo_extrato(t1,c1,"123");
     demo_extrato(t1,c2,"123");
-    //demo_extrato(t1,c3,"123");
+    demo_extrato(t1,c3,"123");
 
     return 0;
 }
