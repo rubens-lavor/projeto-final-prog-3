@@ -7,11 +7,10 @@ C++ igual ou superior a versão 17
 
 ## Compilando e Executando o programa:
 
-Abra a pasta no terminal de comando e digite:
+Abra a pasta no terminal de comandos e digite:
 
-$ make all
-
-$ ./main
+    $ make all
+    $ ./main
 
 
 
