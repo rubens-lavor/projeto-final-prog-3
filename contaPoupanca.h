@@ -6,10 +6,12 @@
 class ContaPoupanca: public Conta
 {
 private:
-    /* data */
+    int tipo = 2;
 public:
-    ContaPoupanca(/* args */);
+    ContaPoupanca(int numero, Pessoa &correntista, float saldo);
     ~ContaPoupanca();
+
+    int getTipo() const;
 };
 
 

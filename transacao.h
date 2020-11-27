@@ -41,7 +41,7 @@ public:
     Transacao(/* args */);
     ~Transacao();
 
-    bool realizarTransacao(Date data, Conta conta, float valor, string historico, int op);
+    bool realizarTransacao(Date data, Conta conta, float valor, string historico, int op, float saldo_anterior);
 
     void estornaTransacao();
 

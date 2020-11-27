@@ -5,11 +5,12 @@ Conta::Conta(){
     contasCriadas++;
 }
 
-Conta::Conta(int numero, Pessoa &correntista, float saldo){
-    
+Conta::Conta(int numero, Pessoa &correntista, float saldo, string _senha):senha(_senha){
     contasCriadas++;
     this->setNumero(numero);
     this->correntista = &correntista;
+
+    cout <<correntista.getNome() << " oiiii senhahaaEOCPKCOKCPOEKCOP: " << _senha << endl;
     
     /*
     não preciso chamar a função.. apenas preciso passar
@@ -21,6 +22,20 @@ Conta::Conta(int numero, Pessoa &correntista, float saldo){
     this->setSaldo(saldo);
     
 }
+
+Conta::~Conta(){
+    //delete correntista;
+}
+
+int Conta::getTipo() const{
+    return tipo;
+}
+
+
+bool Conta::validacao (string chave) const {
+    return chave == senha ? true:false;
+}
+
 
 void Conta::setNumero(int num){
     this->numero = num;

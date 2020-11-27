@@ -7,12 +7,14 @@
 class ContaComum : public Conta, public Taxa
 {
 private:
-    /* data */
+    int tipo = 1;
 public:
 
     ContaComum();
     ContaComum(int numero, Pessoa &correntista, float saldo/*, float valor*/);
     ~ContaComum();
+
+    int getTipo() const;
 
     virtual bool sacar(float valor) override;
 

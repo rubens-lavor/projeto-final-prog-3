@@ -24,7 +24,8 @@ class Conta
 {
 private:
     static int contasCriadas; //contador de objetos da classe Conta
-    
+    string senha="";
+    int tipo = 0;
     /*
     static int DEPOSITAR;
     static int SACAR;
@@ -68,7 +69,11 @@ public:
         saldo -> float que identifica o saldo inicial
         valor -> float que identifica... 
     */
-    Conta(int numero, Pessoa &correntista, float saldo);
+    Conta(int numero, Pessoa &correntista, float saldo, string senha = "123");
+
+    virtual ~Conta();
+
+    bool validacao (string chave) const;
 
     int getNumero();
     void setNumero(int num);
@@ -76,25 +81,17 @@ public:
     
     Pessoa getCorrentista();
     void setCorrentista(Pessoa &correntista);
-    /*é assim que funciona!!!*/
     
     float getSaldo();
     void setSaldo(float saldo);
 
     void depositar(float valor);
+    virtual int getTipo () const;
     virtual bool sacar(float valor); 
-    //apenas a assinatura da função
     // é um método polimorfico
 
 
-    /*Portanto, o conselho geral é:
-
-        Use virtual para a declaração da função de classe base.
-        Isso é tecnicamente necessário.
-
-        Use override(apenas) para a substituição de uma classe derivada.
-        Isso ajuda na manutenção.
-
+    /*
         Exemplo:
 
         struct Base { 

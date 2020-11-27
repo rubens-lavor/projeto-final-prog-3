@@ -1,12 +1,13 @@
 #include "movimento.h"
 
 Movimento::Movimento(Date data, Conta conta,
-                     string historico, float valor, int operacao) {
+                     string historico, float valor, int operacao,float saldoAnterior) {
     this->conta = conta;
     this->historico = historico;
     this->valor = valor;
     this->operacao = operacao;
     this->data = data;
+    this->saldoAnterior = saldoAnterior;
 
     /*
     cout <<"contrutor Movimento" <<endl;

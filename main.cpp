@@ -12,6 +12,70 @@
 
 using namespace std;
 
+void demo_saque_deposito(Conta &a, float valor_saque = 0.0, float valor_deposito = 0.0) {
+    cout << "----------Função demontração de Saques e Depósitos----------" << endl;
+    cout << endl;
+
+    if (valor_saque) {
+        if (a.sacar(50)) {
+            cout << "Saque efetuado com sucesso, no valor de: R$" << valor_saque << endl;
+
+        } else {
+            cout << "Saque não efetuado por saldo insuficiênte" << endl;
+        }
+    }
+    if (valor_deposito) {
+        /* code */
+        a.depositar(1000);
+        cout << "Depósito efetuado com sucesso, no valor de: R$" << valor_deposito << endl;
+    }
+}
+
+void demo_saque_deposito2(ContaEspecial &a, float valor_saque = 0.0, float valor_deposito = 0.0) {
+    if (a.getTipo() == 3) {
+        cout << "--------------------------------------" << endl;
+        cout << endl;
+        cout << "--Conta Especial-(Limite de crédito)--" << endl;
+        cout << endl;
+
+        cout << "Saldo inicial.............: " << a.getSaldo() << endl;
+        cout << "Limite da conta...........: " << a.getLimite() << endl;
+
+        if (a.sacar(100)) {
+            cout << "Saque efetuado com sucesso" << endl;
+        } else {
+            cout << "Saque não efetuado. Limite insuficiênte" << endl;
+        }
+
+        cout << "Saldo atual é.............: " << a.getSaldo() << endl;
+        cout << "Limite da conta...........: " << a.getLimite() << endl;
+        cout << "Correntista...............: " << a.getCorrentista().getNome() << endl;
+
+        cout << "--------------------------------------" << endl;
+        cout << endl;
+        cout << "----------Taxa de Manutenção----------" << endl;
+        cout << endl;
+
+        return;
+    }
+}
+
+void demo_mov(Transacao &t1, Conta &a, int op, float valor, string descricao) {
+    /*
+    cout << "Saldo Atual Inicial: " << a.getSaldo();
+    cout << endl;
+    */
+
+    cout << "movimentações: " << endl;
+
+    float saldo_anterior = a.getSaldo();
+
+    t1.realizarTransacao(Date(), a, 100, descricao, op, saldo_anterior);
+
+    a.movimentar(100, op);
+    cout << endl;
+}
+
 int main() {
     // se fizer assim: Conta c1; usa ponto
     // se instanciar assim: Pessoa *p2 = new Pessoa(); usa ->
@@ -29,7 +93,7 @@ int main() {
     ContaComum c1(190521, p1, 750.00f);
 
     Pessoa p2("maria", "maria@gmail.com");
-    ContaPoupanca c2;
+    ContaPoupanca c2(1255534, p2, 1000.00f);
 
     Pessoa p3("lucia", "lucia@gmail.com");
     ContaEspecial c3(123456, p3, 0.00, 1000);
@@ -66,22 +130,31 @@ int main() {
     cout << "Saldo..............: " << c3.getSaldo() << endl;
     cout << "E-mail.............: " << c3.getCorrentista().getEmail() << endl;
 
-
     cout << "--------------------------------------" << endl;
     cout << endl;
+
+    /*
     cout << "----------Saques e Depósitos----------" << endl;
     cout << endl;
 
     if (c1.sacar(50)) {
-        cout << "Saque efetuado com sucesso" << endl;
+        cout << "Saque efetuado com sucesso:" << endl;
 
     } else {
         cout << "Saque não efetuado por saldo insuficiênte" << endl;
     }
 
     c1.depositar(1000);
+    */
+
+    demo_saque_deposito(c1, 50, 1000);
+
+    //demo_saque_deposito(e1, 50, 1000);
 
     cout << "Correntista: " << c1.getCorrentista().getNome() << endl;
+    cout << "saldo atual: " << c1.getSaldo() << endl;
+
+    /*cout << "Correntista: " << c1.getCorrentista().getNome() << endl;
     cout << "saldo atual: " << c1.getSaldo() << endl;
 
     cout << "--------------------------------------" << endl;
@@ -89,7 +162,6 @@ int main() {
     cout << "--Conta Especial-(Limite de crédito)--" << endl;
     cout << endl;
 
-    
     cout << "Saldo inicial.............: " << c3.getSaldo() << endl;
     cout << "Limite da conta...........: " << c3.getLimite() << endl;
 
@@ -103,11 +175,11 @@ int main() {
     cout << "Limite da conta...........: " << c3.getLimite() << endl;
     cout << "Correntista...............: " << c3.getCorrentista().getNome() << endl;
 
-
     cout << "--------------------------------------" << endl;
     cout << endl;
     cout << "----------Taxa de Manutenção----------" << endl;
     cout << endl;
+    
 
     // Taxa tx(); --> não precisa criar um obj
     // do tipo taxa, outros objetos do tipo
@@ -119,17 +191,21 @@ int main() {
 
     cout << "numero total de contas " << c1.getNumeroTotalDeContas() << endl;
 
-
     //depositar é 1; sacar é 0;
     c1.movimentar(500, 0);  //tem 750 na conta
     cout << "Saldo após movimentação: " << c1.getSaldo();
     cout << endl;
+    */
 
-/*-----------------transações--------------------*/
+    /*-----------------transações--------------------*/
 
     Transacao t1;
 
+    demo_mov(t1,c2,1,500,"transferencia recebida");
+
+    /*
     float salddo_anterior_da_maria = c2.getSaldo();
+
 
     cout << "Saldo Atual Inicial: " << c2.getSaldo();
     cout << endl;
@@ -159,12 +235,22 @@ int main() {
     c2.movimentar(850, 1);
     cout << endl;
     //cout << "Saldo Atual Inicial: (atenção nesse ponto 5) " << c2.getSaldo() << endl;
+    */
+
+   float saldo_anterior_ = 0;
+
+   for (Movimento mov : t1.getMovimentos()) {
+        //cout << "Data........:" << mov.getData() << endl;
+        if (mov.getConta().getCorrentista().getNome() == c2.getCorrentista().getNome()){
+            saldo_anterior_ = mov.getSaldoAnterior();
+        }
+    }
 
     cout << "Emissão de Extrato da Conta Comum de Número: " << c2.getNumero();
     cout << endl;
     cout << "Correntista: " << c2.getCorrentista().getNome();
     cout << endl;
-    cout << "Saldo Anterior: " << salddo_anterior_da_maria;
+    cout << "Saldo Anterior: " << saldo_anterior_;
     cout << endl;
 
     cout << endl;
@@ -172,12 +258,15 @@ int main() {
     cout << endl;
     cout << "------------------------------------" << endl;
 
+
     for (Movimento mov : t1.getMovimentos()) {
         //cout << "Data........:" << mov.getData() << endl;
-        cout << "Histórico...:" << mov.getHistorico() << endl;
-        cout << "Valor.......:" << mov.getValor() << endl;
-        cout << "Operação....:" << mov.getOperacao() << endl;
-        cout << "------------------------------------" << endl;
+        if (mov.getConta().getCorrentista().getNome() == "maria" && mov.getConta().validacao("123")) {
+            cout << "Histórico...:" << mov.getHistorico() << endl;
+            cout << "Valor.......:" << mov.getValor() << endl;
+            cout << "Operação....:" << mov.getOperacao() << endl;
+            cout << "------------------------------------" << endl;
+        }
     }
 
     cout << "Saldo Atual: " << c2.getSaldo() << endl;

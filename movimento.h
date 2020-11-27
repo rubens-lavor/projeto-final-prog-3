@@ -17,14 +17,14 @@ class Movimento
 {
 private:
     Date data;
-    Conta conta; //aparentemente não preciso usar ponteiro
+    Conta conta;
     string historico;
     float valor;
     float saldoAnterior;
     int operacao;
 
 public:
-    Movimento(Date data, Conta conta, string historico, float valor, int operacao);
+    Movimento(Date data, Conta conta, string historico, float valor, int operacao, float saldoAnterior);
     ~Movimento();
 
     void setData(Date data);
