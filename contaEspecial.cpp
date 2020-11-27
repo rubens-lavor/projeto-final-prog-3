@@ -14,7 +14,7 @@ ContaEspecial::ContaEspecial(){
 
 }
 
-ContaEspecial::ContaEspecial(int numero, Pessoa *correntista, float saldo, float limite) : 
+ContaEspecial::ContaEspecial(int numero, Pessoa &correntista, float saldo, float limite) : 
 Conta(numero,correntista,saldo){
 
     this->setLimite(limite);

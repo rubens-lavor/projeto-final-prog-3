@@ -11,7 +11,7 @@ private:
 public:
 
     ContaComum();
-    ContaComum(int numero, Pessoa *correntista, float saldo/*, float valor*/);
+    ContaComum(int numero, Pessoa &correntista, float saldo/*, float valor*/);
     ~ContaComum();
 
     virtual bool sacar(float valor) override;

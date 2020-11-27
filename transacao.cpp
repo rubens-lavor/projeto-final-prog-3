@@ -24,11 +24,7 @@ bool Transacao::realizarTransacao(Date data, Conta conta, float valor, string hi
             cout << "Não deu bom" << endl;
             return false;
         }
-
-        //conta.movimentar(valor,op);
         this->movimentos.push_back(mov);
-        //adiciona no vetor movimentos
-        //o objeto que criamos, no caso mov.
         return true;
         
 }

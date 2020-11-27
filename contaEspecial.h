@@ -13,13 +13,12 @@ class Pessoa;
 
 */
 
-// ':' extende as funcionalidades de uma determinada classe
-// neste nós estamos criando uma extensão da classe Conta
-// denominada classe ContaEspecial
+// ':' estende as funcionalidades de uma determinada classe
+
 
 // ContaEspecial é uma classe derivada de Conta,
 // que herda todas as caracteristicas e funcionalidades
-// definidas em conta
+// definidas em conta e em taxa
 
 class ContaEspecial : public Conta, public Taxa
 {    
@@ -28,7 +27,7 @@ private:
 
 public:
     ContaEspecial();
-    ContaEspecial(int numero, Pessoa *correntista, float saldo, float limite);
+    ContaEspecial(int numero, Pessoa &correntista, float saldo, float limite);
     
     float getLimite();
     void setLimite(float valor);

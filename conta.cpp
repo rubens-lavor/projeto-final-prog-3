@@ -5,11 +5,11 @@ Conta::Conta(){
     contasCriadas++;
 }
 
-Conta::Conta(int numero, Pessoa *correntista, float saldo){
+Conta::Conta(int numero, Pessoa &correntista, float saldo){
     
     contasCriadas++;
     this->setNumero(numero);
-    this->correntista = correntista;
+    this->correntista = &correntista;
     
     /*
     não preciso chamar a função.. apenas preciso passar
@@ -31,8 +31,8 @@ int Conta::getNumero(){
 }
 
 
-void Conta::setCorrentista(Pessoa *correntista){
-    this->correntista = correntista;
+void Conta::setCorrentista(Pessoa &correntista){
+    this->correntista = &correntista;
 }
 
 Pessoa Conta::getCorrentista(){

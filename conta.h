@@ -52,8 +52,6 @@ public:
 
     /*
     Construtor padão da Classe Conta
-    Uso:
-    Conta *conta = new ContaComum();
     */
     Conta();
 
@@ -70,14 +68,14 @@ public:
         saldo -> float que identifica o saldo inicial
         valor -> float que identifica... 
     */
-    Conta(int numero, Pessoa *correntista, float saldo);
+    Conta(int numero, Pessoa &correntista, float saldo);
 
     int getNumero();
     void setNumero(int num);
     
     
     Pessoa getCorrentista();
-    void setCorrentista(Pessoa *correntista);
+    void setCorrentista(Pessoa &correntista);
     /*é assim que funciona!!!*/
     
     float getSaldo();
