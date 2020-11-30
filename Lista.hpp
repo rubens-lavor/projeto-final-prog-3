@@ -5,8 +5,10 @@
 #include <memory>
 #include <vector>
 
+/*
 class Pessoa;
 using namespace std;
+*/
 
 template <class T>
 class Lista {
@@ -15,7 +17,6 @@ class Lista {
     std::unique_ptr<T[]> contas;
     int maximo, top, tam=1;
     std::vector<T>contasss;
-    Pessoa *ptr;
 
     template <typename>
     friend std::ostream &operator<<(std::ostream &, Lista<T> &);
