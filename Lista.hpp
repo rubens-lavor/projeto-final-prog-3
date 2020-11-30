@@ -12,7 +12,6 @@ using namespace std;
 
 template <class T>
 class Lista {
-    public:
     //Tipo* outros;
     std::unique_ptr<T[]> contas;
     int maximo, top, tam=1;
@@ -30,7 +29,7 @@ class Lista {
         contasss.push_back(a);
     }
     */
-   //public:
+   public:
    void operator+(T &c){
        contasss.push_back(c);
    }
@@ -53,10 +52,12 @@ istream &operator>>(istream &input, Lista<T> &a) {
 
 template <class T>
 ostream &operator<<(ostream &output, Lista<T> &list) {
-    output << "Tamanho da lista:" << list.contasss.size() << "\n";
-    for (size_t i = 0; i < list.contasss.size(); i++)
-    {
-        output << "Conta " << i << " - Nome " << list.contasss[i].getCorrentista().getNome() << "\n";
+    output << "Tamanho da lista:" << list.getLista().size() << "\n";
+    string nome{};
+    for (size_t i = 0; i < list.getLista().size(); i++)
+    {   
+        nome = list.getLista().at(i).getCorrentista().getNome();
+        output << "Conta " << i << " - Nome " << nome << "\n";
     }
     
     return output;
