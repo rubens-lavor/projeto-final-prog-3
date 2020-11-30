@@ -19,12 +19,13 @@ class Lista {
     */
 
    public:
-    void operator+(T &c) {
-        contas.push_back(c);
-    }
 
     vector<T> getLista() const {
         return contas;
+    }
+
+    void operator+(T &c) {
+        contas.push_back(c);
     }
 
     T &operator[](size_t indice) {
