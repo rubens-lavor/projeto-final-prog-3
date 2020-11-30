@@ -97,11 +97,13 @@ int main() {
     ContaEspecial c3(123456, p3, 0.00, 1000);
 
     Lista <Conta> lista;
-    lista.incluir(c1);
+    lista + c1;
     lista + c2;
     lista + c3;
 
     cout << lista;
+
+    //lista.imprime_lista();
 
 
     cout << endl;
