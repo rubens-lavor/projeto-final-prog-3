@@ -10,6 +10,8 @@
 #include "taxa.h"
 #include "transacao.h"
 
+#include "Lista.hpp"
+
 using namespace std;
 
 void demo_saque_deposito(Conta &a, float valor_saque = 0.0, float valor_deposito = 0.0) {
@@ -84,6 +86,7 @@ void demo_extrato(Transacao &t1, Conta &c, string senha){
 
 int main() {
 
+    Conta c0;
     Pessoa p1("josé", "jose@gmail.com");
     ContaComum c1(190521, p1, 750.00f);
 
@@ -92,6 +95,12 @@ int main() {
 
     Pessoa p3("lucia", "lucia@gmail.com");
     ContaEspecial c3(123456, p3, 0.00, 1000);
+
+    Lista <Conta> lista;
+    lista.incluir(c1);
+    lista + c2;
+    lista + c3;
+
 
     cout << endl;
     cout << "------------Contas-Correntistas------------" << endl;
