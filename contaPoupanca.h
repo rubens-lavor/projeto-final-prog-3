@@ -11,7 +11,7 @@ public:
     ContaPoupanca(int numero, Pessoa &correntista, float saldo);
     ~ContaPoupanca();
 
-    int getTipo() const;
+    int getTipo() const override;
 };
 
 

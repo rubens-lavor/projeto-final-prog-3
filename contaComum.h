@@ -14,7 +14,7 @@ public:
     ContaComum(int numero, Pessoa &correntista, float saldo/*, float valor*/);
     ~ContaComum();
 
-    int getTipo() const;
+    int getTipo() const override;
 
     virtual bool sacar(float valor) override;
 

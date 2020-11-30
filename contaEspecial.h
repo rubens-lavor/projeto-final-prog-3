@@ -31,7 +31,7 @@ public:
     ContaEspecial(int numero, Pessoa &correntista, float saldo, float limite);
     ~ContaEspecial();
 
-    int getTipo() const;
+    int getTipo() const override;
 
     float getLimite();
     void setLimite(float valor);
