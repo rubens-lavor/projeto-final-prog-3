@@ -54,10 +54,13 @@ template <class T>
 ostream &operator<<(ostream &output, Lista<T> &list) {
     output << "Tamanho da lista:" << list.getLista().size() << "\n";
     string nome{};
+    //int numero;
     for (size_t i = 0; i < list.getLista().size(); i++)
     {   
         nome = list.getLista().at(i).getCorrentista().getNome();
-        output << "Conta " << i << " - Nome " << nome << "\n";
+        // colocar numero da conta
+
+        output << "Conta " << i << " - Nome: " << nome << "\n";
     }
     
     return output;
