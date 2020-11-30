@@ -101,6 +101,8 @@ int main() {
     lista + c2;
     lista + c3;
 
+    cout << lista;
+
 
     cout << endl;
     cout << "------------Contas-Correntistas------------" << endl;
