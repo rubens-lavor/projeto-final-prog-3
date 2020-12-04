@@ -15,3 +15,6 @@ Abra a pasta no terminal de comandos e digite:
 
 
 
+gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04) 
+-Wshadow ---> ok
+-Wmissing-declarations ----> erro vinculado às funções de demonstração
