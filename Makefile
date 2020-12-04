@@ -1,8 +1,3 @@
-########################################################################
-####################### Makefile Template ##############################
-########################################################################
-
-# Compiler settings - Can be customized.
 CC = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -Wshadow -Wconversion -Wcast-align -Wcast-qual -Wctor-dtor-privacy -Wdisabled-optimization -Wformat=2 -Winit-self -Wlogical-op -Wmissing-include-dirs -Wnoexcept -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wsign-conversion -Wsign-promo -Wstrict-null-sentinel -Wstrict-overflow=5 -Wswitch-default -Wundef -Wno-unused
 LDFLAGS = 
@@ -10,7 +5,7 @@ LDFLAGS =
 # Makefile settings - Can be customized.
 APPNAME = main
 EXT = .cpp
-SRCDIR = .
+SRCDIR = ./codigos/
 OBJDIR = .
 
 ############## Do not change anything from here downwards! #############
