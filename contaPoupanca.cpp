@@ -1,7 +1,7 @@
 #include "contaPoupanca.h"
 
-ContaPoupanca::ContaPoupanca(int numero, Pessoa &correntista, float saldo): 
-Conta(numero,correntista,saldo){
+ContaPoupanca::ContaPoupanca(int _numero, Pessoa &_correntista, float _saldo): 
+Conta(_numero,_correntista,_saldo){
 }
 
 ContaPoupanca::~ContaPoupanca()

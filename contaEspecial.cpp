@@ -18,10 +18,10 @@ ContaEspecial::~ContaEspecial(){
 
 }
 
-ContaEspecial::ContaEspecial(int numero, Pessoa &correntista, float saldo, float limite) : 
-Conta(numero,correntista,saldo){
+ContaEspecial::ContaEspecial(int _numero, Pessoa &_correntista, float _saldo, float _limite) : 
+Conta(_numero,_correntista,_saldo){
 
-    this->setLimite(limite);
+    this->setLimite(_limite);
 }
 
 int ContaEspecial::getTipo() const{

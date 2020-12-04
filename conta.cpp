@@ -5,10 +5,11 @@ Conta::Conta(){
     contasCriadas++;
 }
 
-Conta::Conta(int numero, Pessoa &correntista, float saldo, string _senha):senha(_senha){
+Conta::Conta(int _numero, Pessoa &_correntista, float _saldo, string _senha){
     contasCriadas++;
-    this->setNumero(numero);
-    this->correntista = &correntista;
+    this->setNumero(_numero);
+    this->correntista = &_correntista;
+    this->senha = _senha;
     
     /*
     não preciso chamar a função.. apenas preciso passar
@@ -17,7 +18,7 @@ Conta::Conta(int numero, Pessoa &correntista, float saldo, string _senha):senha(
     correntista->getNome();
     correntista->getEmail();
     */
-    this->setSaldo(saldo);
+    this->setSaldo(_saldo);
     
 }
 
@@ -44,16 +45,16 @@ int Conta::getNumero(){
 }
 
 
-void Conta::setCorrentista(Pessoa &correntista){
-    this->correntista = &correntista;
+void Conta::setCorrentista(Pessoa &_correntista){
+    this->correntista = &_correntista;
 }
 
 Pessoa Conta::getCorrentista(){
     return *correntista;
 }
 
-void Conta::setSaldo(float saldo){
-    this->saldo = saldo;
+void Conta::setSaldo(float _saldo){
+    this->saldo = _saldo;
 }
 
 float Conta::getSaldo(){

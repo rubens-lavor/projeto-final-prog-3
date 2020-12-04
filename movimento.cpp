@@ -1,13 +1,13 @@
 #include "movimento.h"
 
-Movimento::Movimento(Date data, Conta conta,
-                     string historico, float valor, int operacao,float saldoAnterior) {
-    this->conta = conta;
-    this->historico = historico;
-    this->valor = valor;
-    this->operacao = operacao;
-    this->data = data;
-    this->saldoAnterior = saldoAnterior;
+Movimento::Movimento(Date _data, Conta _conta,
+                     string _historico, float _valor, int _operacao,float _saldoAnterior) {
+    this->conta = _conta;
+    this->historico = _historico;
+    this->valor = _valor;
+    this->operacao = _operacao;
+    this->data = _data;
+    this->saldoAnterior = _saldoAnterior;
 
     /*
     cout <<"contrutor Movimento" <<endl;
@@ -24,48 +24,48 @@ Movimento::Movimento(Date data, Conta conta,
 Movimento::~Movimento() {
 }
 
-void Movimento::setData(Date data) {
-    this->data = data;
+void Movimento::setData(Date _data) {
+    this->data = _data;
 }
 
 Date Movimento::getData() {
     return data;
 }
 
-void Movimento::setConta(Conta conta) {
-    this->conta = conta;
+void Movimento::setConta(Conta _conta) {
+    this->conta = _conta;
 }
 
 Conta Movimento::getConta() {
     return conta;
 }
 
-void Movimento::setHistorico(string historico) {
-    this->historico = historico;
+void Movimento::setHistorico(string _historico) {
+    this->historico = _historico;
 }
 
 string Movimento::getHistorico() {
     return historico;
 }
 
-void Movimento::setValor(float valor) {
-    this->valor = valor;
+void Movimento::setValor(float _valor) {
+    this->valor = _valor;
 }
 
 float Movimento::getValor() {
     return valor;
 }
 
-void Movimento::setSaldoAnterior(float saldoAnterior) {
-    this->saldoAnterior = saldoAnterior;
+void Movimento::setSaldoAnterior(float _saldoAnterior) {
+    this->saldoAnterior = _saldoAnterior;
 }
 
 float Movimento::getSaldoAnterior() {
     return saldoAnterior;
 }
 
-void Movimento::setOperacao(int operacao) {
-    this->operacao = operacao;
+void Movimento::setOperacao(int _operacao) {
+    this->operacao = _operacao;
 }
 
 int Movimento::getOperacao() {

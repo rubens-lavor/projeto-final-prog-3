@@ -3,8 +3,8 @@
 
 /*iniciando o construtor e aproveitando a inialização do 
 construdor da classe Conta*/
-ContaComum::ContaComum(int numero, Pessoa &correntista, float saldo/*, float valor*/):
-Conta(numero,correntista,saldo){
+ContaComum::ContaComum(int _numero, Pessoa &_correntista, float _saldo/*, float valor*/):
+Conta(_numero,_correntista,_saldo){
 }
 
 ContaComum::ContaComum(){}

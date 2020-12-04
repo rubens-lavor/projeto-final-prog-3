@@ -46,7 +46,7 @@ protected:
     /*
     o atributo saldo é utilizado para referenciar o saldo da conta.
     */
-    float saldo;
+    float saldo{};
 
 
 public:

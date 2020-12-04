@@ -7,7 +7,7 @@ Transacao::Transacao(/* args */)
 
 Transacao::~Transacao()
 {
-    vector<Movimento> movimentos;
+    //vector<Movimento> movimentos;
 }
 
 bool Transacao::realizarTransacao(Date data, Conta conta, float valor, string historico, int op, float saldo_anterior){

@@ -86,7 +86,7 @@ void demo_extrato(Transacao &t1, Conta &c, string senha){
 
 int main() {
 
-    Conta c0;
+    //Conta c0;
     Pessoa p1("josé", "jose@gmail.com");
     ContaComum c1(190521, p1, 750.00f);
 

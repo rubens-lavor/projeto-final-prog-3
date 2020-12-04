@@ -4,22 +4,22 @@ Pessoa::Pessoa(/* args */)
 {
 }
 
-Pessoa::Pessoa(string nome, string email)
+Pessoa::Pessoa(string _nome, string _email)
 {
-    this->nome=nome;
-    this->email=email;
+    this->nome = _nome;
+    this->email = _email;
 }
 
 Pessoa::~Pessoa()
 {
 }
 
-void Pessoa::setNome (string nome){
-    this->nome = nome;
+void Pessoa::setNome (string _nome){
+    this->nome = _nome;
 }
 
-void Pessoa::setEmail (string email){
-    this->email = email;
+void Pessoa::setEmail (string _email){
+    this->email = _email;
 }
 
 string Pessoa::getNome (){
