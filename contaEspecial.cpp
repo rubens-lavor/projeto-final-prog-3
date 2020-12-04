@@ -1,14 +1,5 @@
 #include "contaEspecial.h"
 
-/*
-#include "Pessoa.h"
-#include "Conta.h"
-#include "Conta.cpp"
-
-using namespace std;
-class Pessoa;
-class Conta;
-*/
 
 ContaEspecial::ContaEspecial(){
 

@@ -17,7 +17,7 @@ contas bancárias
 
 
 
-class Pessoa; // se eu tirar o identificador do tipo não é definido
+//class Pessoa; // se eu tirar o identificador do tipo não é definido
 //verificar o pq da razão de se colocar o class Pessoa
 
 class Conta

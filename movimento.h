@@ -4,9 +4,6 @@
 #include "conta.h"
 #include "date.h"
 
-class Conta;
-class Date;
-
 // relação do tipo agregação entre as classes
 // movimento e conta
 // quando uma classe utiliza os componentes de outras

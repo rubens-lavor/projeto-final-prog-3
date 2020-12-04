@@ -5,7 +5,6 @@
 #include "movimento.h"
 #include <vector>
 using namespace std;
-class Movimento;
 //class Date;
 
 
