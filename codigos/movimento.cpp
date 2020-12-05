@@ -1,6 +1,6 @@
 #include "movimento.h"
 
-Movimento::Movimento(Date _data, Conta _conta,
+Movimento::Movimento(Date _data, Conta &_conta,
                      string _historico, float _valor, int _operacao,float _saldoAnterior) {
     this->conta = _conta;
     this->historico = _historico;
@@ -77,6 +77,7 @@ bool Movimento::movimentar() {
     if (operacao == 0)  //sacar
     {
         return this->conta.movimentar(this->valor, this->operacao);
+
     } else if (operacao == 1)  //depositar
     {
         this->conta.movimentar(this->valor, this->operacao);

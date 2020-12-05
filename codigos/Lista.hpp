@@ -8,75 +8,62 @@
 
 template <class T>
 class Lista {
-    std::vector<T*> contas{3};
-    size_t top = 0;
+    std::vector<T *> contas{10};
+    size_t tam = 0;
 
     template <typename>
     friend std::ostream &operator<<(std::ostream &, Lista<T> &);
 
-    /*
-    template <typename>
-    friend std::istream &operator>>(std::istream &, Lista<T> &);
-    */
-   /*
-   std::unique_ptr<Tipo[]> outros;
-    int maximo, top;
-
    public:
-    Lista(unsigned capacidade = 20) : top{-1} {
-//        outros = new Tipo[capacidade];
-        outros = std::make_unique<Tipo[]>(capacidade);
-        maximo = capacidade;
+
+    
+    size_t getTam()const{
+        return tam;
     }
-*/
-    public:
-    /*
-    * retorna a lista
-    */
-   
-    vector<T*> getLista() const {
+
+    vector<T *> getLista() const {
         return contas;
     }
-
 
     /*
      * adiciona uma conta a lista
     */
-    void operator+(T *c) {
-        contas[top]=c;
-        top++;
-
+    void operator+=(T *c) {
+        contas[tam] = c;
+        tam++;
     }
 
+    /*
     void insere(T &c){
-        contas[top]=&c;
-        top++;
+        contas[tam]=&c;
+        tam++;
     }
+    */
 
-    
-    T* operator[](size_t indice) const {
+    T *operator[](size_t indice) const {
         return contas[indice];
     }
 
+    void imprime_lista_detalhada() {
+        for (size_t i = 0; i < tam; i++) {
+            contas[i]->info();
+            cout<< "\n";
+            cout << "-------------------------------------" << endl;
+        }
+    }
 };
-/*
-template <class T>
-istream &operator>>(istream &input, Lista<T> &a) {
-    return input;
-}
-*/
 
 template <class T>
-ostream &operator<<(ostream &output, const Lista<T> &list) {
-    output << "Tamanho da lista:" << list.getLista().size() << "\n";
+ostream &operator<<(ostream &output, const Lista<T> &lista) {
+    output << "Tamanho da listaa:" << lista.getTam() << "\n";
     string nome{};
     int numero;
 
-    for (size_t i = 0; i < list.getLista().size(); i++) {
-        nome = list[i]->getCorrentista().getNome();
-        numero = list[i]->getNumero();
+    for (size_t i = 0; i < lista.getTam(); i++) {
+        nome = lista[i]->getCorrentista().getNome();
+        numero = lista[i]->getNumero();
 
-        output << "Conta " << numero << " - Nome: " << nome << "\n";
+        output << "Correntista: " << nome <<  "  Numero da Conta: " << numero << "\n";
     }
 
     return output;

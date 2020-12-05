@@ -87,26 +87,6 @@ bool Conta::sacar(float valor){
 
 bool Conta::movimentar(float valor, int operacao){
     
-    //bool retorno = true;
-    
-    /* 
-    switch (operacao)
-    {   
-        case 1:
-            this->depositar(valor);
-            break;
-    
-        case 0:
-            retorno = this->sacar(valor);
-            break;
-
-        default:
-            return false
-    }
-
-    return retorno
-
-    */
 
    if (operacao == 1) //depositar
    {

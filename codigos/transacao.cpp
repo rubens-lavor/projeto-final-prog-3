@@ -10,7 +10,7 @@ Transacao::~Transacao()
     //vector<Movimento> movimentos;
 }
 
-bool Transacao::realizarTransacao(Date data, Conta conta, float valor, string historico, int op, float saldo_anterior){
+bool Transacao::realizarTransacao(Date data, Conta &conta, float valor, string historico, int op, float saldo_anterior){
         Movimento mov (data, conta, historico,valor,op, saldo_anterior);
         
         if (!mov.movimentar())
@@ -19,6 +19,9 @@ bool Transacao::realizarTransacao(Date data, Conta conta, float valor, string hi
             return false;
         }
         //cout << "ok" << endl;
+
+        conta.movimentar(valor,op);
+        //movimentação registrada
         this->movimentos.push_back(mov);
         return true;
         

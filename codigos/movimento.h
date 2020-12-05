@@ -6,9 +6,6 @@
 
 // relação do tipo agregação entre as classes
 // movimento e conta
-// quando uma classe utiliza os componentes de outras
-// classes..
-// o que são componentes de uma classe???
 
 class Movimento
 {
@@ -21,7 +18,7 @@ private:
     int operacao;
 
 public:
-    Movimento(Date data, Conta conta, string historico, float valor, int operacao, float saldoAnterior);
+    Movimento(Date data, Conta &conta, string historico, float valor, int operacao, float saldoAnterior);
     ~Movimento();
 
     void setData(Date data);
@@ -42,6 +39,7 @@ public:
     void setOperacao(int operacao);
     int getOperacao();
 
+    /*retorna true se a operação foi realizada com sucesso*/
     bool movimentar();  
 
 
