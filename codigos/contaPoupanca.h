@@ -7,12 +7,11 @@
 class ContaPoupanca: public Conta, public Taxa
 {
 private:
-    int tipo = 2;
 public:
     ContaPoupanca(int numero, Pessoa &correntista, float saldo);
     ~ContaPoupanca();
 
-    int getTipo() const override;
+    //int getTipo() const override;
     virtual void info() const override;
 
     virtual void incremento_juros() override;

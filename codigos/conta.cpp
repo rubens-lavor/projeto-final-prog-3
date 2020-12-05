@@ -26,9 +26,11 @@ Conta::~Conta(){
     //delete correntista;
 }
 
+/*
 int Conta::getTipo() const{
     return tipo;
 }
+*/
 
 
 bool Conta::validacao (string chave) const {

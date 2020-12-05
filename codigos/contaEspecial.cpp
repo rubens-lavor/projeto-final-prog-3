@@ -15,9 +15,11 @@ Conta(_numero,_correntista,_saldo){
     this->setLimite(_limite);
 }
 
+/*
 int ContaEspecial::getTipo() const{
     return tipo;
 }
+*/
 
 float ContaEspecial::getLimite(){
     return this->limite;

@@ -25,7 +25,7 @@ class Conta
 private:
     static int contasCriadas; //contador de objetos da classe Conta
     string senha="";
-    int tipo = 0;
+    //int tipo = 0;
     /*
     static int DEPOSITAR;
     static int SACAR;
@@ -87,7 +87,8 @@ public:
     void setSaldo(float saldo);
 
     void depositar(float valor);
-    virtual int getTipo () const;
+    
+    //virtual int getTipo () const;
 
     virtual void info() const;
 

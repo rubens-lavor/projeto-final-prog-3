@@ -25,14 +25,13 @@ class ContaEspecial : public Conta, public Taxa
 private:
     float limite;
     float limiteAtual;
-    int tipo = 3;
 
 public:
     ContaEspecial();
     ContaEspecial(int numero, Pessoa &correntista, float saldo, float limite);
     ~ContaEspecial();
 
-    int getTipo() const override;
+    //int getTipo() const override;
 
     float getLimite();
     void setLimite(float valor);

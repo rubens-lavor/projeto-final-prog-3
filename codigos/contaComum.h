@@ -12,14 +12,14 @@
 class ContaComum : public Conta, public Taxa
 {
 private:
-    int tipo = 1;
+
 public:
 
     ContaComum();
     ContaComum(int numero, Pessoa &correntista, float saldo/*, float valor*/);
     ~ContaComum();
 
-    virtual int getTipo() const override;
+    //virtual int getTipo() const override;
 
     /*
      - método mostra no terminal informações referentes a determinada conta

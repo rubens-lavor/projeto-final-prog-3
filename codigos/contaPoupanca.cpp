@@ -8,9 +8,11 @@ ContaPoupanca::~ContaPoupanca()
 {
 }
 
+/*
 int ContaPoupanca::getTipo() const {
     return tipo;
 }
+*/
 
 void ContaPoupanca::info() const {
     cout << "Conta Poupança" << endl;

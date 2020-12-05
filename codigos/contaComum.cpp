@@ -13,9 +13,11 @@ ContaComum::~ContaComum()
 {
 }
 
+/*
 int ContaComum::getTipo() const{
     return tipo;
 }
+*/
 
 /*
 bool ContaComum::sacar(float valor){
