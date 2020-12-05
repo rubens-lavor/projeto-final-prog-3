@@ -5,7 +5,7 @@ LDFLAGS =
 # Makefile settings - Can be customized.
 APPNAME = main
 EXT = .cpp
-SRCDIR = ./codigos/
+SRCDIR = ./src/
 OBJDIR = .
 
 ############## Do not change anything from here downwards! #############
