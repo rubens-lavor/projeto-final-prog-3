@@ -4,31 +4,31 @@ Pessoa::Pessoa(/* args */)
 {
 }
 
-Pessoa::Pessoa(string _nome, string _email)
+Pessoa::Pessoa(std::string _nome, std::string _CPF)
 {
     this->nome = _nome;
-    this->email = _email;
+    this->CPF = _CPF;
 }
 
 Pessoa::~Pessoa()
 {
 }
 
-void Pessoa::setNome (string _nome){
+void Pessoa::setNome (std::string _nome){
     this->nome = _nome;
 }
 
-void Pessoa::setEmail (string _email){
-    this->email = _email;
+void Pessoa::setCPF (std::string _CPF){
+    this->CPF = _CPF;
 }
 
-string Pessoa::getNome (){
+std::string Pessoa::getNome (){
     //cout<<"ok "<< this->nome;
     return this->nome;
 }
 
-string Pessoa::getEmail (){
-    //cout<<"oi"<< this->email;
-    return this->email;
+std::string Pessoa::getCPF (){
+    //cout<<"oi"<< this->CPF;
+    return this->CPF;
 }
 

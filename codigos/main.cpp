@@ -1,31 +1,25 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 #include "conta.h"
 #include "contaComum.h"
 #include "contaEspecial.h"
 #include "contaPoupanca.h"
-#include "movimento.h"
 #include "pessoa.h"
-#include "taxa.h"
 #include "transacao.h"
-
 #include "Lista.hpp"
 
-
-using namespace std;
 
 
 int main() {
 
-    Pessoa p1("josé", "jose@gmail.com");
+    Pessoa p1("josé", "123.456.789-09");
     ContaComum c1(190521, p1, 750.00f);
 
-    Pessoa p2("maria", "maria@gmail.com");
+    Pessoa p2("maria", "001.456.789-99");
     ContaPoupanca c2(1255534, p2, 1000.00f);
 
-    Pessoa p3("lucia", "lucia@gmail.com");
+    Pessoa p3("lucia", "002.456.789-88");
     ContaEspecial c3(123456, p3, 0.00, 1000);
 
     //template e sobrecarga de operador
@@ -35,26 +29,21 @@ int main() {
     lista += c2;
     lista += c3;
 
-    cout << lista;
+    std::cout << lista;
 
     /*Herança e Polimorfismo--------------------*/
     Transacao t1;
 
-        t1.realizarTransacao(c1,100.00,"Pagamento Telefone",0,c1.getSaldo());
-        t1.realizarTransacao(c2,1400.00,"Salário",1,c2.getSaldo());
-        t1.realizarTransacao(c3,350.00,"Empréstimo",0,c3.getSaldo());
+    t1.realizarTransacao(c1,100.00,"Pagamento Telefone",0,c1.getSaldo());
+    t1.realizarTransacao(c2,1400.00,"Salário",1,c2.getSaldo());
+    t1.realizarTransacao(c3,350.00,"Empréstimo",0,c3.getSaldo());
 
-    cout << endl;
-
-    t1.extrato(c1);
-
-    cout << endl;
-
-    t1.extrato(c2);
-
-    cout << endl;
-
-    t1.extrato(c3);
+    //std::cout << std::endl;
+    t1.extrato(c1,"123");
+    //std::cout << std::endl;
+    t1.extrato(c2,"123");
+    //std::cout << std::endl;
+    t1.extrato(c3,"123");
 
     return 0;
 }

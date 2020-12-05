@@ -1,7 +1,7 @@
 #include "movimento.h"
 
 Movimento::Movimento(Conta &_conta,
-                     string _historico, float _valor, int _operacao,float _saldoAnterior) {
+                     std::string _historico, float _valor, int _operacao,float _saldoAnterior) {
     this->conta = _conta;
     this->historico = _historico;
     this->valor = _valor;
@@ -20,11 +20,11 @@ Conta Movimento::getConta() {
     return conta;
 }
 
-void Movimento::setHistorico(string _historico) {
+void Movimento::setHistorico(std::string _historico) {
     this->historico = _historico;
 }
 
-string Movimento::getHistorico() {
+std::string Movimento::getHistorico() {
     return historico;
 }
 
@@ -51,7 +51,7 @@ void Movimento::setOperacao(int _operacao) {
 int Movimento::getOperacao() {
     return operacao;
 }
-
+/*
 bool Movimento::movimentar() {
     this->saldoAnterior = conta.getSaldo();
     if (operacao == 0)  //sacar
@@ -65,3 +65,4 @@ bool Movimento::movimentar() {
     }
     return false;
 }
+*/

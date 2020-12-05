@@ -44,8 +44,9 @@ void ContaComum::descontarTaxaManutencao(){
 }
 
 void ContaComum::info() const {
-    cout << "Número da conta...........: " << this->numero << endl;
-    cout << "Correntista...............: " << this->correntista->getNome() << endl;
-    cout << "Saldo.....................: " << this->saldo << endl;
-    cout << "E-mail....................: " << this->correntista->getEmail() << endl;
+    std::cout << "Conta Comum :\n";
+    std::cout << "Número da conta...........: " << this->numero << std::endl;
+    std::cout << "Correntista...............: " << this->correntista->getNome() << std::endl;
+    std::cout << "Saldo.....................: " << this->saldo << std::endl;
+    std::cout << "CPF.......................: " << this->correntista->getCPF() << std::endl;
 }

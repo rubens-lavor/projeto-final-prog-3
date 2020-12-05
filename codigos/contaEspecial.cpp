@@ -46,12 +46,12 @@ void ContaEspecial::descontarTaxaManutencao() {
 }
 
 void ContaEspecial::info() const {
-    cout << "Conta Especial - Número...........: " << this->numero << endl;
-    cout << "Correntista.......................: " << this->correntista->getNome() << endl;
-    cout << "Saldo.............................: " << this->saldo << endl;
-    cout << "Limite Conta Especial.............: " << this->limite << endl;
-    cout << "Limite Atual......................: " << this->limiteAtual << endl;
-    //cout << "E-mail....................: " << this->correntista->getEmail() << endl;
+    std::cout << "Conta Especial - Número...........: " << this->numero << std::endl;
+    std::cout << "Correntista.......................: " << this->correntista->getNome() << std::endl;
+    std::cout << "Saldo.............................: " << this->saldo << std::endl;
+    std::cout << "Limite Conta Especial.............: " << this->limite << std::endl;
+    std::cout << "Limite Atual......................: " << this->limiteAtual << std::endl;
+    std::cout << "CPF...............................: " << this->correntista->getCPF() << std::endl;
 }
 
 /*
@@ -61,7 +61,7 @@ bool ContaEspecial::movimentar(float valor, int operacao){
    if (operacao == 1) //depositar
    {
         this->depositar(valor);
-        //cout << "Operação Depositar realizada com sucesso."<<endl;
+        //std::cout << "Operação Depositar realizada com sucesso."<<std::endl;
         return true;
 
    }
@@ -69,12 +69,12 @@ bool ContaEspecial::movimentar(float valor, int operacao){
    {
        if (this->sacar(valor))
        {    
-           //cout << "Operação Sacar realizada com sucesso."<<endl;
+           //std::cout << "Operação Sacar realizada com sucesso."<<std::endl;
            return true;
        }
        else
        {
-           cout << "Saldo Insuficiente" << endl;
+           std::cout << "Saldo Insuficiente" << std::endl;
            return false;
        }
        

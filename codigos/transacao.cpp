@@ -1,35 +1,24 @@
 #include "transacao.h"
 
-
-Transacao::Transacao(/* args */)
-{
+Transacao::Transacao() {
 }
 
-Transacao::~Transacao()
-{
-    //vector<Movimento> movimentos;
+Transacao::~Transacao() {
 }
 
-bool Transacao::realizarTransacao(Conta &conta, float valor, string historico, int op, float saldo_anterior){
-        Movimento mov (conta, historico,valor,op, saldo_anterior);
+bool Transacao::realizarTransacao(Conta &conta, float valor, std::string historico, int op, float saldo_anterior) {
+    Movimento mov(conta, historico, valor, op, saldo_anterior);
 
-        //if (!mov.movimentar())
-        if (!conta.movimentar(valor,op))
-        {
-            cout << "Não deu bom" << endl;
-            return false;
-        }
-        //cout << "ok" << endl;
+    if (!conta.movimentar(valor, op)) {
+        return false;
+    }
 
-        //conta.movimentar(valor,op);
-        //movimentação registrada
-        this->movimentos.push_back(mov);
-        return true;
-        
+    this->movimentos.push_back(mov);
+    return true;
 }
 
-void Transacao::estornaTransacao(){
-    for(Movimento mov: this->movimentos){
+void Transacao::estornaTransacao() {
+    for (Movimento mov : this->movimentos) {
         movimentos.pop_back();
     }
 
@@ -42,48 +31,28 @@ void Transacao::estornaTransacao(){
     */
 }
 
-//retorna o vector
-vector<Movimento> Transacao::getMovimentos(){
-    return this->movimentos;
-}
-
-
-void Transacao::extrato(Conta &c1) const {
-
-    
+void Transacao::extrato(Conta &c1, std::string _senha ) const {
     float saldo_anterior_ = 0;
-    //bool validacao = c1.validacao("123");
+    bool validacao = c1.validacao(_senha);
     int num_conta = c1.getNumero();
 
-    cout << endl;
-    cout << "------------------------------------" << endl;
-    cout << "Emissão de Extrato:\n";
-    /*
-    cout << endl;
-    cout << endl;
-    cout << "Correntista...: " << c1.getCorrentista().getNome();
-    cout << endl;
-    cout << endl;
-    cout << endl;
-    */
+    std::cout << "\n\n-----------------------------------------" << std::endl;
+    std::cout << "Emissão de Extrato:\n";
+
     c1.info();
 
-    cout << "\nMovimentações: " << endl;
+    std::cout << "\nMovimentações: " << std::endl;
 
     for (Movimento mov : this->movimentos) {
-        if (mov.getConta().getNumero() == num_conta) {
-            //cout << "Data..........:" << endl;
-            cout << "Descrição.....:" << mov.getHistorico() << endl;
-            cout << "Valor.........:" << mov.getValor() << endl;
-            cout << "Operação......:" << (mov.getOperacao()?"deposito":"saque") << endl;
+        if (mov.getConta().getNumero() == num_conta && validacao) {
+            std::cout << "Descrição.....:" << mov.getHistorico() << std::endl;
+            std::cout << "Valor.........:" << mov.getValor() << std::endl;
+            std::cout << "Operação......:" << (mov.getOperacao() ? "Deposito" : "Saque") << std::endl;
             saldo_anterior_ = mov.getSaldoAnterior();
         }
     }
 
-    
-    cout << "------------------------------------" << endl;
-    
-    cout << "Saldo Anterior: " << saldo_anterior_;
-    cout << endl;
-    cout << "Saldo Atual: " << c1.getSaldo() << endl;
+    std::cout << "\nSaldo Anterior: " << saldo_anterior_ << std::endl;
+    std::cout << "Saldo Atual: " << c1.getSaldo()<< std::endl;
+
 }

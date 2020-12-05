@@ -3,25 +3,46 @@
 
 #include <iostream>
 #include <string>
-using namespace std;
 
-class Pessoa
-{
-private:
-    string nome;
-    string email;
+/*A classe Pessoa define um correntista*/
+
+class Pessoa {
+   private:
+    /*Nome da pessoa*/
+    std::string nome;
     
-public:
-    Pessoa(/* args */);
-    Pessoa(string nome,string email);
+    /*numero do cpf*/
+    std::string CPF;
+
+   public:
+
+   /*
+     - Construtor padrão da classe Pessoa
+    */
+    Pessoa();
+
+    /*
+     - Construtor sobrecarregado da classe Pessoa
+    */
+    Pessoa(std::string _nome, std::string _CPF);
+
+    /*
+     - Destrutor sobrecarregado da classe Pessoa
+    */
     ~Pessoa();
 
-    void setNome (string nome);
-    void setEmail (string email);
+    /*atribui o parametro recebido para o atritubo nome */
+    void setNome(std::string _nome);
 
-    string getNome ();
-    string getEmail ();
+    /*atribui o parametro recebido para o atritubo CPF */
+    void setCPF(std::string _CPF);
+
+    /*retorna o atributo nome */
+    std::string getNome();
+
+    /*retorna o atributo CPF */
+    std::string getCPF();
 };
 
-
 #endif
+

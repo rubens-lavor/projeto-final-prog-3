@@ -22,7 +22,7 @@ class Conta {
     /*
     - atributo que armazena a senha da conta
     */
-    string senha = "";
+    std::string senha = "";
 
    protected:
     /*
@@ -58,7 +58,7 @@ class Conta {
         saldo --> float que identifica o saldo inicial
         senha --> string indetifica a senha da conta 
     */
-    Conta(int numero, Pessoa &correntista, float saldo, string senha = "123");
+    Conta(int numero, Pessoa &correntista, float saldo, std::string senha = "123");
 
     /*
         destrutor virtual padrão da Classe Conta
@@ -70,7 +70,7 @@ class Conta {
         - parametro chave representa a senha passada para verificação/autenticação
         - returna true se chave seja válida; caso contrário false.
     */
-    bool validacao(string chave) const;
+    bool validacao(std::string chave) const;
 
     /*
         método que retorna o número da conta

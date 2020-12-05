@@ -5,7 +5,7 @@ Conta::Conta(){
     contasCriadas++;
 }
 
-Conta::Conta(int _numero, Pessoa &_correntista, float _saldo, string _senha){
+Conta::Conta(int _numero, Pessoa &_correntista, float _saldo, std::string _senha){
     contasCriadas++;
     this->setNumero(_numero);
     this->correntista = &_correntista;
@@ -33,7 +33,7 @@ int Conta::getTipo() const{
 */
 
 
-bool Conta::validacao (string chave) const {
+bool Conta::validacao (std::string chave) const {
     return chave == senha ? true:false;
 }
 
@@ -67,22 +67,22 @@ float Conta::getSaldo(){
 
 void Conta::depositar(float valor){
     this->setSaldo(this->getSaldo() + valor);
-    //cout << "Depósito no valor de: R$ "<< valor << endl;
-    //cout << "Operação Realizada" << endl;
-    //cout << "Saldo Atual após o depósito: "<< this->getSaldo() <<endl; 
+    //std::cout << "Depósito no valor de: R$ "<< valor << std::endl;
+    //std::cout << "Operação Realizada" << std::endl;
+    //std::cout << "Saldo Atual após o depósito: "<< this->getSaldo() <<std::endl; 
 }
 
 bool Conta::sacar(float valor){
     if (this->getSaldo()>= valor)
     {
-        //cout << "Saque no valor de: R$ " << valor << endl; 
+        //std::cout << "Saque no valor de: R$ " << valor << std::endl; 
         this->setSaldo(this->getSaldo() - valor);
-        //cout << "Operação Realizada" << endl;
-        //cout << "Saldo Atual após o saque: "<< this->getSaldo() <<endl; 
+        //std::cout << "Operação Realizada" << std::endl;
+        //std::cout << "Saldo Atual após o saque: "<< this->getSaldo() <<std::endl; 
         return true;
     }else
     {   
-        cout << "Saldo Insuficiente" << endl;
+        std::cout << "Saldo Insuficiente" << std::endl;
         return false;
     }
 }
@@ -93,7 +93,7 @@ bool Conta::movimentar(float valor, int operacao){
    if (operacao == 1) //depositar
    {
         this->depositar(valor);
-        //cout << "Operação Depositar realizada com sucesso."<<endl;
+        //std::cout << "Operação Depositar realizada com sucesso."<<std::endl;
         return true;
 
    }
@@ -101,21 +101,21 @@ bool Conta::movimentar(float valor, int operacao){
    {
        if (this->sacar(valor))
        {    
-           //cout << "Operação Sacar realizada com sucesso."<<endl;
+           //std::cout << "Operação Sacar realizada com sucesso."<<std::endl;
            return true;
        }
        else
        {
-           cout << "Saldo Insuficiente" << endl;
+           std::cout << "Saldo Insuficiente" << std::endl;
            return false;
        }
        
    }else
    {    
        /*
-       cout << "Operação incorreta."<<endl;
-       cout << "Escolha 0 (zero) para sacar ou."<<endl;
-       cout << "Escolha 1 (um) para depositar."<<endl;
+       std::cout << "Operação incorreta."<<std::endl;
+       std::cout << "Escolha 0 (zero) para sacar ou."<<std::endl;
+       std::cout << "Escolha 1 (um) para depositar."<<std::endl;
        */
        return false;
    }

@@ -12,8 +12,19 @@
 class ContaComum : public Conta, public Taxa {
    private:
    public:
+   /*
+     - Construtor padrão da classe ContaComum
+    */
     ContaComum();
+    /*
+     - Construtor sobrecarregado da classe ContaComum
+     - A partir dele também é construido um objeto Conta, chamando o construtor sobrecarregado da classe Conta
+    */
     ContaComum(int numero, Pessoa &correntista, float saldo /*, float valor*/);
+
+    /*
+     - Destrutor padrão da classe ContaComum
+    */
     ~ContaComum();
 
     /*

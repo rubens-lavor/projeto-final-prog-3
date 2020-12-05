@@ -15,11 +15,11 @@ int ContaPoupanca::getTipo() const {
 */
 
 void ContaPoupanca::info() const {
-    cout << "Conta Poupança" << endl;
-    cout << "Número....................: " << this->numero << endl;
-    cout << "Correntista...............: " << this->correntista->getNome() << endl;
-    cout << "Saldo.....................: " << this->saldo << endl;
-    //cout << "E-mail....................: " << this->correntista->getEmail() << endl;
+    std::cout << "Conta Poupança" << std::endl;
+    std::cout << "Número....................: " << this->numero << std::endl;
+    std::cout << "Correntista...............: " << this->correntista->getNome() << std::endl;
+    std::cout << "Saldo.....................: " << this->saldo << std::endl;
+    std::cout << "CPF.......................: " << this->correntista->getCPF() << std::endl;
 }
 
 void ContaPoupanca::incremento_juros(){

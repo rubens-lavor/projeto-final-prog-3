@@ -110,10 +110,10 @@ class Lista {
 /*Template de função*/
 /* operador de saída sobrecarregado para a classe Lista */
 template <class T>
-ostream &operator<<(ostream &output, const Lista<T> &lista) {
+std::ostream &operator<<(std::ostream &output, const Lista<T> &lista) {
 
     output << "Tamanho da lista:" << lista.getTam() << "\n";
-    string nome{};
+    std::string nome{};
     int numero;
 
     for (size_t i = 0; i < lista.getTam(); i++) {

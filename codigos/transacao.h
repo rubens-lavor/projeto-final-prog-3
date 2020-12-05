@@ -1,53 +1,53 @@
 #ifndef TRANSACAO_H
 #define TRANSACAO_H
 
-//#include "Date.h"
 #include "movimento.h"
 #include <vector>
-using namespace std;
-//class Date;
 
+
+/* A relação entre as classes Transação e Movimento é do tipo composição */
 
 /*
-A classe Transação compoe um conjunto 
-de objs do tipo Movimento.
-Logo existe uma relação entre 
-a classe Transação e a classe Movimento na
-forma de uma commposição.
-A classe Transacao é composta por objs do tipo
-movimento.
-E existe uma relação forte entre as duas:
-No momento em que uma transacao deixar de
-existir, serão destruídos todos os movimentos
-associados a essa transação. Ou seja todos os 
-movimentos serão destruídas quando uma transacao
-também for destruída.
-
-Conceito de composição é parecido com agregação,
-porém na composição existe uma relação mais  forte
+    A classe Transacao é composta por objs do tipo Movimento, existe uma relação entre a classe Transação e a classe Movimento na forma de uma composição.
+    No momento em que uma transacao deixar de existir, serão destruídos todos os movimentos associados a essa transação.
 */
 
+/* A classe Transacao controla operações de movimento da conta */
+/* efetiva uma movimentação na conta e aprensenta o extrato delas*/
 
-//controla operações de movimento da conta
-//efetiva uma movimentação na conta
 class Transacao 
 {
 private:
-    vector <Movimento> movimentos; 
-    //vetor de obj do tipo movimento
+    /*
+     - vetor de obj do tipo movimento
+     - reponsável por armazenar as movimentações realizadas pelos correntistas 
+    */
+    std::vector <Movimento> movimentos; 
 
 public:
-    Transacao(/* args */);
+
+    /*Construtor padrão da classe Transacao*/
+    Transacao();
+
+    /*Destrutor padrão da classe Transacao*/
     ~Transacao();
+    
+    /*
+        O método realizarTransacao() cria e adiciona um objeto do tipo Movimento ao vector movimentos.
+        Se a transação foi realizada return true, senão false.
+    */
+    bool realizarTransacao(Conta &conta, float valor, std::string historico, int op, float saldo_anterior);
 
-    bool realizarTransacao(Conta &conta, float valor, string historico, int op, float saldo_anterior);
-
+    /*
+        - retira do vector movimentos uma transacao estornada 
+    */
     void estornaTransacao();
 
-    //Movimento getMovimentos();
-    vector<Movimento> getMovimentos();
-
-    void extrato(Conta &c1) const;
+    /*
+        - imprime o extrato bancário de determinada conta, acessando o vector movimentos
+        - Parametros: um obj Conta passado por referencia e uma senha para verificação  
+    */
+    void extrato(Conta &c1, std::string senha) const;
 };
 
 
