@@ -62,13 +62,14 @@ class Conta {
     Conta(int numero, Pessoa &correntista, float saldo, string senha = "123");
 
     /*
-        destrutor virual padrão da Classe Conta
+        destrutor virtual padrão da Classe Conta
     */
     virtual ~Conta();
 
-    /*
-        - string chave representa a senha passada para verificação/autenticação
-        - returna true se chave for válida; caso contrário false.
+    /*  
+        - O método valida a chave passada
+        - parametro chave representa a senha passada para verificação/autenticação
+        - returna true se chave seja válida; caso contrário false.
     */
     bool validacao(string chave) const;
 

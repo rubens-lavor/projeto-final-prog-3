@@ -1,18 +1,14 @@
 #include "contaEspecial.h"
 
-
-ContaEspecial::ContaEspecial(){
-
+ContaEspecial::ContaEspecial() {
 }
 
-ContaEspecial::~ContaEspecial(){
-
+ContaEspecial::~ContaEspecial() {
 }
 
-ContaEspecial::ContaEspecial(int _numero, Pessoa &_correntista, float _saldo, float _limite) : 
-Conta(_numero,_correntista,_saldo){
-
+ContaEspecial::ContaEspecial(int _numero, Pessoa &_correntista, float _saldo, float _limite) : Conta(_numero, _correntista, _saldo) {
     this->setLimite(_limite);
+    this->limiteAtual = _limite;
 }
 
 /*
@@ -21,36 +17,31 @@ int ContaEspecial::getTipo() const{
 }
 */
 
-float ContaEspecial::getLimite(){
+float ContaEspecial::getLimite() {
     return this->limite;
 }
 
-void ContaEspecial::setLimite(float valor){
-    this->limite=valor;
+void ContaEspecial::setLimite(float valor) {
+    this->limite = valor;
 }
 
-bool ContaEspecial::sacar(float valor){
-    if (valor > this->getLimite())
-    {
-        return false;
-
-    }else
-    {
-        this->setSaldo(this->getSaldo() - valor);
-        this->setLimite(this->getLimite() - valor);
-    
-        return true;
+bool ContaEspecial::sacar(float valor) {
+    if (valor > this->saldo) {
+        if (valor > this->saldo + this->limiteAtual) {
+            return false;
+        } else {
+            this->saldo -= valor;
+            this->limiteAtual += this->saldo;
+            //this->saldo = 0;
+        }
+    } else {
+        this->saldo -= valor;
     }
-      
+
+    return true;
 }
 
-/*
-float ContaEspecial::getTaxaManutencao(){
-    return 17.00f;
-}
-*/
-
-void ContaEspecial::descontarTaxaManutencao(){
+void ContaEspecial::descontarTaxaManutencao() {
     this->setSaldo(this->getSaldo() - this->getTaxaManutencao());
 }
 
@@ -59,9 +50,11 @@ void ContaEspecial::info() const {
     cout << "Correntista.......................: " << this->correntista->getNome() << endl;
     cout << "Saldo.............................: " << this->saldo << endl;
     cout << "Limite Conta Especial.............: " << this->limite << endl;
+    cout << "Limite Atual......................: " << this->limiteAtual << endl;
     //cout << "E-mail....................: " << this->correntista->getEmail() << endl;
 }
 
+/*
 bool ContaEspecial::movimentar(float valor, int operacao){
     
 
@@ -87,12 +80,8 @@ bool ContaEspecial::movimentar(float valor, int operacao){
        
    }else
    {    
-       /*
-       cout << "Operação incorreta."<<endl;
-       cout << "Escolha 0 (zero) para sacar ou."<<endl;
-       cout << "Escolha 1 (um) para depositar."<<endl;
-       */
        return false;
    }
 
 }
+*/
