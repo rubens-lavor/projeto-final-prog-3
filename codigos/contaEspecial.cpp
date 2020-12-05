@@ -42,18 +42,55 @@ bool ContaEspecial::sacar(float valor){
       
 }
 
+/*
 float ContaEspecial::getTaxaManutencao(){
     return 17.00f;
 }
+*/
 
 void ContaEspecial::descontarTaxaManutencao(){
     this->setSaldo(this->getSaldo() - this->getTaxaManutencao());
 }
 
 void ContaEspecial::info() const {
-    cout << "Número da conta...........: " << this->numero << endl;
-    cout << "Correntista...............: " << this->correntista->getNome() << endl;
-    cout << "Saldo.....................: " << this->saldo << endl;
-    cout << "Limite da conta...........: " << this->limite << endl;
-    cout << "E-mail....................: " << this->correntista->getEmail() << endl;
+    cout << "Conta Especial - Número...........: " << this->numero << endl;
+    cout << "Correntista.......................: " << this->correntista->getNome() << endl;
+    cout << "Saldo.............................: " << this->saldo << endl;
+    cout << "Limite Conta Especial.............: " << this->limite << endl;
+    //cout << "E-mail....................: " << this->correntista->getEmail() << endl;
+}
+
+bool ContaEspecial::movimentar(float valor, int operacao){
+    
+
+   if (operacao == 1) //depositar
+   {
+        this->depositar(valor);
+        //cout << "Operação Depositar realizada com sucesso."<<endl;
+        return true;
+
+   }
+   else if (operacao == 0) //sacar
+   {
+       if (this->sacar(valor))
+       {    
+           //cout << "Operação Sacar realizada com sucesso."<<endl;
+           return true;
+       }
+       else
+       {
+           cout << "Saldo Insuficiente" << endl;
+           return false;
+       }
+       
+   }else
+   {    
+       /*
+       cout << "Operação incorreta."<<endl;
+       cout << "Escolha 0 (zero) para sacar ou."<<endl;
+       cout << "Escolha 1 (um) para depositar."<<endl;
+       */
+       return false;
+   }
+
 }

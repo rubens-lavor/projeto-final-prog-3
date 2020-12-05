@@ -13,8 +13,13 @@ int ContaPoupanca::getTipo() const {
 }
 
 void ContaPoupanca::info() const {
-    cout << "Número da conta...........: " << this->numero << endl;
+    cout << "Conta Poupança" << endl;
+    cout << "Número....................: " << this->numero << endl;
     cout << "Correntista...............: " << this->correntista->getNome() << endl;
     cout << "Saldo.....................: " << this->saldo << endl;
-    cout << "E-mail....................: " << this->correntista->getEmail() << endl;
+    //cout << "E-mail....................: " << this->correntista->getEmail() << endl;
+}
+
+void ContaPoupanca::incremento_juros(){
+    this->saldo *= this->getTaxa_juros_poupanca();
 }

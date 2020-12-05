@@ -17,6 +17,7 @@ int ContaComum::getTipo() const{
     return tipo;
 }
 
+/*
 bool ContaComum::sacar(float valor){
     if (this->getSaldo()>= valor)
     {
@@ -27,11 +28,14 @@ bool ContaComum::sacar(float valor){
         return false;
     }
 }
+*/
 
+/*
 float ContaComum::getTaxaManutencao(){
     return 17.00f;
-
 }
+*/
+
 void ContaComum::descontarTaxaManutencao(){
     this->setSaldo(this->getSaldo() - this->getTaxaManutencao());
     //_conta->setSaldo(_conta->getSaldo() - this->getTaxaManutencao());

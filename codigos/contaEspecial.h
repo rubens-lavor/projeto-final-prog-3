@@ -24,6 +24,7 @@ class ContaEspecial : public Conta, public Taxa
 {    
 private:
     float limite;
+    float limiteAtual;
     int tipo = 3;
 
 public:
@@ -37,11 +38,13 @@ public:
     void setLimite(float valor);
 
     virtual void info() const override;
+    virtual bool movimentar(float valor, int operacao) override; 
 
     virtual bool sacar(float valor) override;
     
-    virtual float getTaxaManutencao() override;
+    //virtual float getTaxaManutencao() override;
     virtual void descontarTaxaManutencao() override;
+    virtual void incremento_juros() override {};
     
 };
 

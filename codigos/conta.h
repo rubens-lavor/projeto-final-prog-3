@@ -106,7 +106,7 @@ public:
         };
 
     */
-    bool movimentar(float valor, int operacao);   
+    virtual bool movimentar(float valor, int operacao);   
     int getNumeroTotalDeContas();
 
 };

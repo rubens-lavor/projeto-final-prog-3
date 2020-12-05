@@ -42,6 +42,8 @@ public:
     /*retorna true se a operação foi realizada com sucesso*/
     bool movimentar();  
 
+    //void extrato(Conta) const;
+
 
 };
 

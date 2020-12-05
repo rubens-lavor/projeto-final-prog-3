@@ -46,9 +46,9 @@ public:
 
     //Movimento getMovimentos();
     vector<Movimento> getMovimentos();
+
+    void extrato(Conta &c1) const;
 };
-
-
 
 
 #endif

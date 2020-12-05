@@ -4,6 +4,11 @@
 #include "conta.h"
 #include "taxa.h"
 
+/*
+ - class ContaComum deriva de Conta e Taxa
+ - Como se trata de uma herança publica e multipla, 
+ - ContaComum herda todos os métodos e atributos das classes Conta e Taxa. 
+*/
 class ContaComum : public Conta, public Taxa
 {
 private:
@@ -14,14 +19,39 @@ public:
     ContaComum(int numero, Pessoa &correntista, float saldo/*, float valor*/);
     ~ContaComum();
 
-    int getTipo() const override;
+    virtual int getTipo() const override;
 
+    /*
+     - método mostra no terminal informações referentes a determinada conta
+    */
     virtual void info() const override;
-    virtual bool sacar(float valor) override;
 
-    virtual float getTaxaManutencao() override;
+
+    /*
+     - verifica se é possível realizar o saque, permitindo ou não a movimentação
+     - o método movimentar da classe base Conta utiliza essa verificação
+     - o método é polimorfo, pois Conta Especial permite o saque mesmo sem saldo, até um certo limite
+    */
+    //virtual bool sacar(float valor) override;
+
+    /*
+     - retorna o valor referente a taxa de manutenção
+    */
+    
+    //virtual float getTaxaManutencao() override;
+
+    /*
+     - desconta um valor referente a taxa de manutenção da conta comum
+    */
     virtual void descontarTaxaManutencao() override;
-    //virtual void descontarTaxaManutencao(Conta *_conta) override;
+
+
+    /*
+     - é necessário implementar incremento_juros(), senão a classe ContaComum se torna abstrata
+     - isso não convém porque a classe ContaComum precisa ser instanciada.
+     - como não há juros na conta comum a função não realiza operação nessa classe.
+    */
+    virtual void incremento_juros() override {};
 
 };
 
