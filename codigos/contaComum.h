@@ -9,23 +9,17 @@
  - Como se trata de uma herança publica e multipla, 
  - ContaComum herda todos os métodos e atributos das classes Conta e Taxa. 
 */
-class ContaComum : public Conta, public Taxa
-{
-private:
-
-public:
-
+class ContaComum : public Conta, public Taxa {
+   private:
+   public:
     ContaComum();
-    ContaComum(int numero, Pessoa &correntista, float saldo/*, float valor*/);
+    ContaComum(int numero, Pessoa &correntista, float saldo /*, float valor*/);
     ~ContaComum();
 
-    //virtual int getTipo() const override;
-
     /*
-     - método mostra no terminal informações referentes a determinada conta
+     - método mostra no terminal informações referentes a determinada conta comum
     */
     virtual void info() const override;
-
 
     /*
      - verifica se é possível realizar o saque, permitindo ou não a movimentação
@@ -37,7 +31,7 @@ public:
     /*
      - retorna o valor referente a taxa de manutenção
     */
-    
+
     //virtual float getTaxaManutencao() override;
 
     /*
@@ -45,14 +39,12 @@ public:
     */
     virtual void descontarTaxaManutencao() override;
 
-
     /*
      - é necessário implementar incremento_juros(), senão a classe ContaComum se torna abstrata
      - isso não convém porque a classe ContaComum precisa ser instanciada.
      - como não há juros na conta comum a função não realiza operação nessa classe.
     */
-    virtual void incremento_juros() override {};
-
+    virtual void incremento_juros() override{};
 };
 
 #endif
