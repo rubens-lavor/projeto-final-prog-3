@@ -40,7 +40,6 @@ class Conta {
     */
     float saldo{};
 
-    //enum class Contas{    COMUM,    POUPANCA,    ESPECIAL};
 
    public:
     /*

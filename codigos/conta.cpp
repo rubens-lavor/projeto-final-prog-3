@@ -23,7 +23,7 @@ Conta::Conta(int _numero, Pessoa &_correntista, float _saldo, string _senha){
 }
 
 Conta::~Conta(){
-    //delete correntista;
+
 }
 
 /*

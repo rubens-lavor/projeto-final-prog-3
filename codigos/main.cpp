@@ -29,11 +29,11 @@ int main() {
     ContaEspecial c3(123456, p3, 0.00, 1000);
 
     //template e sobrecarga de operador
-    Lista <Conta> lista;
+    Lista <Conta> lista(5);
 
-    lista += &c1;
-    lista += &c2;
-    lista += &c3;
+    lista += c1;
+    lista += c2;
+    lista += c3;
 
     cout << lista;
 
