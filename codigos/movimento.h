@@ -2,7 +2,6 @@
 #define MOVIMENTO_H
 
 #include "conta.h"
-#include "date.h"
 
 // relação do tipo agregação entre as classes
 // movimento e conta
@@ -10,7 +9,6 @@
 class Movimento
 {
 private:
-    Date data;
     Conta conta;
     string historico;
     float valor;
@@ -18,12 +16,9 @@ private:
     int operacao;
 
 public:
-    Movimento(Date data, Conta &conta, string historico, float valor, int operacao, float saldoAnterior);
+    Movimento(Conta &conta, string historico, float valor, int operacao, float saldoAnterior);
     ~Movimento();
-
-    void setData(Date data);
-    Date getData();
-
+    
     void setConta(Conta conta);
     Conta getConta();
 

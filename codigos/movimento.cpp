@@ -1,35 +1,15 @@
 #include "movimento.h"
 
-Movimento::Movimento(Date _data, Conta &_conta,
+Movimento::Movimento(Conta &_conta,
                      string _historico, float _valor, int _operacao,float _saldoAnterior) {
     this->conta = _conta;
     this->historico = _historico;
     this->valor = _valor;
     this->operacao = _operacao;
-    this->data = _data;
     this->saldoAnterior = _saldoAnterior;
-
-    /*
-    cout <<"contrutor Movimento" <<endl;
-    if (operacao == 0)
-    {
-        conta.movimentar(valor,operacao);
-    }else
-    {
-        conta.movimentar(valor,operacao);
-    }
-    */
 }
 
 Movimento::~Movimento() {
-}
-
-void Movimento::setData(Date _data) {
-    this->data = _data;
-}
-
-Date Movimento::getData() {
-    return data;
 }
 
 void Movimento::setConta(Conta _conta) {

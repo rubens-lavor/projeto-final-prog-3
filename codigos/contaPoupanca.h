@@ -4,10 +4,26 @@
 #include "conta.h"
 #include "taxa.h"
 
+/*
+ - class ContaPoupanca deriva de Conta e Taxa
+ - Como se trata de uma herança publica e multipla, 
+ - ContaPoupanca herda todos os métodos e atributos das classes Conta e Taxa. 
+*/
+
 class ContaPoupanca : public Conta, public Taxa {
    private:
+   /* Não há atributos em ContaPoupanca além dos já definidos em class Conta e class Taxa */
    public:
+
+   /*
+     - Construtor da classe ContaPoupanca
+     - A partir dele também é construido um objeto Conta, chamando o construtor sobrecarregado da classe Conta
+    */
     ContaPoupanca(int numero, Pessoa &correntista, float saldo);
+
+    /*
+     - Destrutos da classe ContaPoupanca
+    */
     ~ContaPoupanca();
 
     /*

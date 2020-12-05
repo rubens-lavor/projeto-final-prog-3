@@ -6,7 +6,6 @@
 #include "contaComum.h"
 #include "contaEspecial.h"
 #include "contaPoupanca.h"
-#include "date.h"
 #include "movimento.h"
 #include "pessoa.h"
 #include "taxa.h"
@@ -41,9 +40,9 @@ int main() {
     /*Herança e Polimorfismo--------------------*/
     Transacao t1;
 
-        t1.realizarTransacao(Date(),c1,100.00,"Pagamento Telefone",0,c1.getSaldo());
-        t1.realizarTransacao(Date(),c2,1400.00,"Salário",1,c2.getSaldo());
-        t1.realizarTransacao(Date(),c3,350.00,"Empréstimo",0,c3.getSaldo());
+        t1.realizarTransacao(c1,100.00,"Pagamento Telefone",0,c1.getSaldo());
+        t1.realizarTransacao(c2,1400.00,"Salário",1,c2.getSaldo());
+        t1.realizarTransacao(c3,350.00,"Empréstimo",0,c3.getSaldo());
 
     cout << endl;
 

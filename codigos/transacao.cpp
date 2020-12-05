@@ -10,8 +10,8 @@ Transacao::~Transacao()
     //vector<Movimento> movimentos;
 }
 
-bool Transacao::realizarTransacao(Date data, Conta &conta, float valor, string historico, int op, float saldo_anterior){
-        Movimento mov (data, conta, historico,valor,op, saldo_anterior);
+bool Transacao::realizarTransacao(Conta &conta, float valor, string historico, int op, float saldo_anterior){
+        Movimento mov (conta, historico,valor,op, saldo_anterior);
 
         //if (!mov.movimentar())
         if (!conta.movimentar(valor,op))
