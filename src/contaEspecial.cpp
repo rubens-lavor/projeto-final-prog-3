@@ -1,4 +1,4 @@
-#include "contaEspecial.h"
+#include "../includes/contaEspecial.h"
 
 ContaEspecial::ContaEspecial() {
 }
@@ -10,12 +10,6 @@ ContaEspecial::ContaEspecial(int _numero, Pessoa &_correntista, float _saldo, fl
     this->setLimite(_limite);
     this->limiteAtual = _limite;
 }
-
-/*
-int ContaEspecial::getTipo() const{
-    return tipo;
-}
-*/
 
 float ContaEspecial::getLimite() {
     return this->limite;
@@ -53,35 +47,3 @@ void ContaEspecial::info() const {
     std::cout << "Limite Atual......................: " << this->limiteAtual << std::endl;
     std::cout << "CPF...............................: " << this->correntista->getCPF() << std::endl;
 }
-
-/*
-bool ContaEspecial::movimentar(float valor, int operacao){
-    
-
-   if (operacao == 1) //depositar
-   {
-        this->depositar(valor);
-        //std::cout << "Operação Depositar realizada com sucesso."<<std::endl;
-        return true;
-
-   }
-   else if (operacao == 0) //sacar
-   {
-       if (this->sacar(valor))
-       {    
-           //std::cout << "Operação Sacar realizada com sucesso."<<std::endl;
-           return true;
-       }
-       else
-       {
-           std::cout << "Saldo Insuficiente" << std::endl;
-           return false;
-       }
-       
-   }else
-   {    
-       return false;
-   }
-
-}
-*/
