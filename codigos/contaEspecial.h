@@ -71,7 +71,7 @@ public:
     /*
      - é necessário implementar incremento_juros(), senão a classe ContaEspecial se torna abstrata
      - isso não convém porque a classe ContaEspecial precisa ser instanciada.
-     - como não há juros na conta comum a função não realiza operação nessa classe.
+     - como não há juros na conta especial a função não realiza operação nessa classe.
     */
     virtual void incremento_juros() override {};
     
