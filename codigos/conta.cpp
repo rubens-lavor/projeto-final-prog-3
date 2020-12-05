@@ -158,3 +158,7 @@ void Conta::incrementaContas(){
 int Conta::getNumeroTotalDeContas(){
     return contasCriadas;
 }
+
+void Conta::info() const {
+    cout << "oiiiiiiiiiiiiiii\n";
+}

@@ -36,3 +36,10 @@ void ContaComum::descontarTaxaManutencao(){
     this->setSaldo(this->getSaldo() - this->getTaxaManutencao());
     //_conta->setSaldo(_conta->getSaldo() - this->getTaxaManutencao());
 }
+
+void ContaComum::info() const {
+    cout << "Número da conta...........: " << this->numero << endl;
+    cout << "Correntista...............: " << this->correntista->getNome() << endl;
+    cout << "Saldo.....................: " << this->saldo << endl;
+    cout << "E-mail....................: " << this->correntista->getEmail() << endl;
+}

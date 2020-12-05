@@ -50,3 +50,10 @@ void ContaEspecial::descontarTaxaManutencao(){
     this->setSaldo(this->getSaldo() - this->getTaxaManutencao());
 }
 
+void ContaEspecial::info() const {
+    cout << "Número da conta...........: " << this->numero << endl;
+    cout << "Correntista...............: " << this->correntista->getNome() << endl;
+    cout << "Saldo.....................: " << this->saldo << endl;
+    cout << "Limite da conta...........: " << this->limite << endl;
+    cout << "E-mail....................: " << this->correntista->getEmail() << endl;
+}

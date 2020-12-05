@@ -36,6 +36,8 @@ public:
     float getLimite();
     void setLimite(float valor);
 
+    virtual void info() const override;
+
     virtual bool sacar(float valor) override;
     
     virtual float getTaxaManutencao() override;

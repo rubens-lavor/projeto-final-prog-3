@@ -16,6 +16,7 @@ public:
 
     int getTipo() const override;
 
+    virtual void info() const override;
     virtual bool sacar(float valor) override;
 
     virtual float getTaxaManutencao() override;

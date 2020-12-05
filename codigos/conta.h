@@ -48,6 +48,7 @@ protected:
     */
     float saldo{};
 
+    enum class Contas{    COMUM,    POUPANCA,    ESPECIAL};
 
 public:
 
@@ -87,6 +88,9 @@ public:
 
     void depositar(float valor);
     virtual int getTipo () const;
+
+    virtual void info() const;
+
     virtual bool sacar(float valor); 
     // é um método polimorfico
 

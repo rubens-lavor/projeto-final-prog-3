@@ -12,6 +12,7 @@ public:
     ~ContaPoupanca();
 
     int getTipo() const override;
+    void info() const;
 };
 
 
