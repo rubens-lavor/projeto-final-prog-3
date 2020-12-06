@@ -1,13 +1,19 @@
--std=c++17 -Wall -Wextra -Werror -Wshadow -Wconversion -Wcast-align -Wcast-qual -Wctor-dtor-privacy -Wdisabled-optimization -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wnoexcept -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wsign-conversion -Wsign-promo -Wstrict-null-sentinel -Wstrict-overflow=5 -Wswitch-default -Wundef -Wno-unused [-Wlifetime (clang++)] 
+# Programação Orientada a Objetos: Operações de Sistemas Bancários em C++
 
+Este projeto visa demonstrar os principais conceitos de orientação a objeto usando a linguagem C++; são eles: Classe, Encapsulamento, Agregação e Composição, Templates, Sobrecarga de operador, Herança e Polimorfismo. Por meio  de operações bancárias tais como abertura de contas, transferências, demonstrativos bancários (extratos), entre outros. Todo o código está documentado nos arquivos de cabeçalho. 
 
--std=c++17 -Wall -Wextra -Werror -Wshadow -Wconversion -Wcast-align -Wcast-qual -Wctor-dtor-privacy -Wdisabled-optimization -Wformat=2 -Winit-self -Wlogical-op -Wmissing-include-dirs -Wnoexcept -Wold-style-cast -Woverloaded-virtual -Wredundant-decls -Wsign-conversion -Wsign-promo -Wstrict-null-sentinel -Wstrict-overflow=5 -Wswitch-default -Wundef -Wno-unused
+## Ambiente de Desenvolvimento:
 
+- O código foi desenvolvido e testado na IDE VScode em máquina com o sistema operacinal Ubuntu 20.04
 
+- compilador gcc versão 9.3.0 
 
+- dialeto C++ => 17.
 
-# projeto-final-prog-3
-gcc version 9.3.0 (Ubuntu 9.3.0-17ubuntu1~20.04) 
+### Flags de compilação usadas:
+
+    -std=c++17 -Wall -Wextra -Werror -Wshadow -Wconversion -Wcast-align -Wcast-qual -Wctor-dtor-privacy -Wdisabled-optimization -Wformat=2 -Winit-self -Wlogical-op -Wmissing-declarations -Wmissing-include-dirs -Wnoexcept -Wold-style-cast       -Woverloaded-virtual -Wredundant-decls -Wsign-conversion -Wsign-promo           -Wstrict-null-sentinel -Wstrict-overflow=5 -Wswitch-default -Wundef -Wno-unused
+
 ## Pré requisitos:
 > C++ igual ou superior a versão 17
 
