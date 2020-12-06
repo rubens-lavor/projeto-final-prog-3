@@ -3,7 +3,7 @@
 
 #include "conta.h"
 
-/* A relação entre as classes Movimento e Conta é do tipo agregação */
+/* A relação entre as classes Movimento e Conta é na forma de uma agregação */
 /*
     A classe Movimento registra todas as atividades de determinada conta. 
     Por meio da classe Transacao, sempre que uma conta realiza um pagamento ou saque um obj Movimento é criado e associado a conta 
@@ -15,7 +15,7 @@ class Movimento {
    /*obj conta*/
     Conta conta;
 
-    /*historico armanzena a descrição da transacao*/
+    /*historico armazena a descrição da transacao*/
     std::string historico;
 
     /*valor da transação*/

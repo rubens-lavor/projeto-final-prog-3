@@ -145,8 +145,6 @@ class Conta {
     - sacar() é chamado dentro do método movimentar()
     */
     virtual bool sacar(float valor);
-
-    //virtual bool movimentar(float valor, int operacao);
 };
 
 #endif

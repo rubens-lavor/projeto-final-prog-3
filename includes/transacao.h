@@ -1,9 +1,9 @@
 #ifndef TRANSACAO_H
 #define TRANSACAO_H
 
-#include "movimento.h"
 #include <vector>
 
+#include "movimento.h"
 
 /* A relação entre as classes Transação e Movimento é do tipo composição */
 
@@ -15,23 +15,21 @@
 /* A classe Transacao controla operações de movimento da conta */
 /* efetiva uma movimentação na conta e aprensenta o extrato delas*/
 
-class Transacao 
-{
-private:
+class Transacao {
+   private:
     /*
      - vetor de obj do tipo movimento
      - reponsável por armazenar as movimentações realizadas pelos correntistas 
     */
-    std::vector <Movimento> movimentos; 
+    std::vector<Movimento> movimentos;
 
-public:
-
+   public:
     /*Construtor padrão da classe Transacao*/
     Transacao();
 
     /*Destrutor padrão da classe Transacao*/
     ~Transacao();
-    
+
     /*
         O método realizarTransacao() cria e adiciona um objeto do tipo Movimento ao vector movimentos.
         Se a transação foi realizada return true, senão false.
@@ -49,6 +47,5 @@ public:
     */
     void extrato(Conta &c1, std::string senha) const;
 };
-
 
 #endif
