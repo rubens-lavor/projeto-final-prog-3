@@ -60,36 +60,63 @@ thaiz.izidoro@grad.ufsc.br}
 \end{abstract}
 
 \begin{IEEEkeywords}
-C++, Programação, Orientação a Objetos, Operações Bancárias.
-
+    C++, Programação, Orientação a Objetos, Operações Bancárias.
 \end{IEEEkeywords}
 
 \section{Introdução}
-O relatório tem como objetivo detalhar o funcionamento
+Este relatório tem como objetivo detalhar o funcionamento
 do algoritmos desenvolvido para simular operações do sistema bancário, feito como trabalho final
-para a disciplina de programação 3. O software utiliza o conteúdo
-ensinado durante o semestre como Classe, Encapsulamento, Agregação e Composição, Templates, Sobrecarga de operador, Herança e Polimorfismo.
+para a disciplina de programação 3.
 
 \section{Desenvolvimento}
 
 \subsection{Classe Conta}
-
-A classe Conta define um tipo de dado abstrato para a criação da estrutura de classes de contas bancárias, é a estrutura central do projeto e classe base para as classes derivadas ContaComum, ContaEspecial e ContaPoupanca, ou seja, estas três, herdam as funcionalidades de Conta. Nela encontramos atributos e métodos comuns a todas as contas (e o que esperamos que elas tenham no mundo real). Exemplos de atributos presentes: senha, número da conta, saldo; exemplos de métodos: depositar, sacar, entre outras.
-
-Conceitos fundamentais de OO a partir da Classe Conta:
-\begin{itemize}
-    \item  \textbf{Encapsulamento}: Em linguagens orientadas a objeto, é a capacidade de ocultação de detalhes de implementação por parte de entidades de manipulação de dados, por meio dos especificadores de acesso, em C++ são três: \textbf{public}, \textbf{private} e \textbf{protected}. Cada atributo oferece um nível de ocultação para membros de classes. Eles são usados para assegurar que apenas grupos identificados de código tenham acesso a partes pré selecionadas da classe.
-    \item \textbf{Agregação}: Conta possui uma referência para a classe Pessoa, trata-se de uma associação na forma de agregação, pois o objeto do tipo Pessoa não deixa de existir quando quando o objeto do tipo Conta, associado a ele, é destruído. Com isso um objeto Conta, por meio dos métodos presentes na classe Pessoa, pode ter acesso ao nome e CPF do correntista.
-    \item Do not mix complete spellings and abbreviations of units: ``Wb/m\textsuperscript{2}'' or ``webers per square meter'', not ``webers/m\textsuperscript{2}''. Spell out units when they appear in text: ``. . . a few henries'', not ``. . . a few H''.
-    \item Use a zero before decimal points: ``0.25'', not ``.25''. Use ``cm\textsuperscript{3}'', not ``cc''.)
-    \end{itemize}
-
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=10cm]{../img/class Conta.png}
+    \includegraphics[width=8.8cm]{../img/Conta.png}
     \caption{Arquivo de cabeçalho conta.h}
     \label{fig_conta}
 \end{figure}
+A classe Conta define um tipo de dado abstrato para a criação da estrutura de classes de contas bancárias, é a estrutura central do projeto e classe base para as classes derivadas ContaComum, ContaEspecial e ContaPoupanca, ou seja, estas três, herdam as funcionalidades de Conta. Nela encontramos atributos e métodos comuns a todas as contas (e o que esperamos que elas tenham no mundo real). Exemplos de atributos presentes: senha, número da conta, saldo; exemplos de métodos: depositar, sacar, entre outras.
+
+Conceitos fundamentais de OO a partir da Classe Conta:
+\begin{enumerate}
+    \item \textbf{Encapsulamento}: Em linguagens orientadas a objeto, é a capacidade de ocultação de detalhes de implementação por parte de entidades de manipulação de dados, por meio dos especificadores de acesso, em C++ são três: \textbf{public}, \textbf{private} e \textbf{protected}. Cada atributo oferece um nível de ocultação para membros de classes.
+    \item \textbf{Agregação}: Conta possui uma referência para a classe Pessoa, trata-se de uma associação na forma de agregação, pois o objeto do tipo Pessoa não deixa de existir quando quando o objeto do tipo Conta, associado a ele, é destruído. Com isso um objeto Conta, por meio dos métodos presentes na classe Pessoa, pode ter acesso ao nome e CPF do correntista.
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=7.5cm]{../img/Pessoa.png}
+        \caption{Arquivo de cabeçalho pessoa.h}
+        \label{fig_pessoa}
+    \end{figure}
+    \item \textbf{Herança}: Herança é um dos pontos chave de programação orientada a objetos. Ela fornece meios de promover a extensibilidade do código, a reutilização e uma maior coerência lógica no modelo de implementação.
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=8.8cm]{../img/ContaPoupanca.png}
+        \caption{Arquivo de cabeçalho contaPoupanca.h}
+        \label{fig_conta}
+    \end{figure}
+    
+    \item \textbf{Polimorfismo}:
+
+    O polimorfismo em C++ se apresenta sob diversas formas diferentes, desde as mais simples, como funções com mesmo nome e lista de parâmetros diferentes, até as mais complexas como funções virtuais, cujas formas de execução são dependentes da classe a qual o objeto pertence e são identificadas em tempo de execução.
+    
+    No método sacar, por exemplo, o polimorfismo é necessário, pois a classe ContaEspecial permite que o correntista saque um valor além do saldo, trata-se de um limite especial que esse tipo de conta oferece. Mesmo com o saldo zerado, é possível realizar um saque até determinado valor. Isso já não acontece, por exemplo, em ContaPoupanca, onde não é possível sacar valores além do saldo em conta, cada classe apresenta um comportamento distinto para a funcionalidade sacar.
+    \end{enumerate}
+
+    \subsection{Classe Movimento}
+    A classe Movimento registra todas as atividades de uma determinada conta. Sempre que uma nova transação é realizada, um objeto Movimento é criado e associado a conta correspondente. 
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=7cm]{../img/Movimento.png}
+        \caption{Arquivo de cabeçalho movimento.h}
+        \label{fig_conta}
+    \end{figure}
+
+    A relação entre as classes Movimento e Conta é na forma de uma agregação. Os atributos “historico”,”valor” e “operacao” armazenam, a descrição da transação, valor da transação, se é saque ou depósito; respectivamente.
+
+    \subsection{Classe Transacao}
+    Transacao controla operações de movimentações bancárias. Mesmo sendo totalmente possível um objeto ContaComum, por exemplo, realizar um saque ou depósito, no código do projeto isso é feito apenas por meio de um objeto do tipo Transacao. Pois assim é possível criar um objeto Movimento e registrar as atividades bancárias realizadas.
 
 
 \section{Prepare Your Paper Before Styling}

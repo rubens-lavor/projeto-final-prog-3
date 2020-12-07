@@ -1,9 +1,12 @@
 # Fdb version 3
-["pdflatex"] 1607379708 "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.tex" "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.pdf" "Relatório" 1607379708
-  "../img/class Conta.png" 1607378429 110180 3f58bda364768c1d5c7065495356c966 ""
+["pdflatex"] 1607383443 "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.tex" "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.pdf" "Relatório" 1607383443
+  "../img/Conta.png" 1607381075 104042 75544112bfac1b14ada58290569ee728 ""
+  "../img/ContaPoupanca.png" 1607381075 56163 4d5356c6e65c42a75df6fc59e2b5f1c8 ""
+  "../img/Movimento.png" 1607383207 22043 73110004496d76deb2f9580e0a933926 ""
+  "../img/Pessoa.png" 1607381677 49138 f0c64f8d173ad1aa1252285a263a91ab ""
   "/etc/texmf/web2c/texmf.cnf" 1593128070 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.aux" 1607379708 2416 166a8d5651a82600a8c6294fece07b00 ""
-  "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.tex" 1607379708 16749 c721be1e8a9446d7b41dd336dcdb45a1 ""
+  "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.aux" 1607383443 3141 5e733a9f3c519fd5c9a532b53cc6a5b9 ""
+  "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.tex" 1607383442 18639 bee4a49b5c0582229bfef3e7a929a38f ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -85,11 +88,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1593128217 4770781 1ed1abab22da9c3e2cc82e4db562318b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1593128276 8259001 f2d0bfec0fba2c8793aee55a48b0efb0 ""
-  "Relatório.aux" 1607379708 2416 166a8d5651a82600a8c6294fece07b00 "pdflatex"
-  "Relatório.tex" 1607379708 16749 c721be1e8a9446d7b41dd336dcdb45a1 ""
+  "Relatório.aux" 1607383443 3141 5e733a9f3c519fd5c9a532b53cc6a5b9 "pdflatex"
+  "Relatório.tex" 1607383442 18639 bee4a49b5c0582229bfef3e7a929a38f ""
   (generated)
-  "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.pdf"
-  "Relatório.aux"
-  "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.log"
   "Relatório.log"
   "Relatório.pdf"
+  "Relatório.aux"
+  "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.pdf"
+  "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.log"
