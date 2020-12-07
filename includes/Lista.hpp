@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <memory>
-//#include <vector>
 
 /*Template de class*/
 
@@ -19,9 +18,6 @@
 template <class T>
 class Lista {
    private:
-    //std::vector<T *> contas{10};
-    //std::unique_ptr<T[10]> contas;
-
     //T *contas;
 
     /*
