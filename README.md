@@ -1,6 +1,8 @@
-# Programação Orientada a Objetos: Operações de Sistemas Bancários em C++
+# Programação Orientada a Objetos: Operações de Sistema Bancário em C++
 
 Este projeto visa demonstrar os principais conceitos de orientação a objeto usando a linguagem C++; são eles: Classe, Encapsulamento, Agregação e Composição, Templates, Sobrecarga de operador, Herança e Polimorfismo. Por meio  de operações bancárias tais como abertura de contas, transferências, demonstrativos bancários (extratos), entre outros. Todo o código está documentado nos arquivos de cabeçalho. 
+
+Equipe: Rubens Heryson de Lima Lavor e Thaiz Antunes Izidoro
 
 ## Ambiente de Desenvolvimento:
 
