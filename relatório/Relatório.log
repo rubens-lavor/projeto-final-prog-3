@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.6.25)  7 DEC 2020 20:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.6.25)  7 DEC 2020 20:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -249,14 +249,7 @@ File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count272
 \l__pdf_internal_box=\box51
-) (/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.aux
-
-LaTeX Warning: Label `fig_conta' multiply defined.
-
-
-LaTeX Warning: Label `fig_conta' multiply defined.
-
-)
+) (/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.aux)
 \openout1 = `Relatório.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
@@ -369,16 +362,12 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[4] (/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[4] (/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.aux) ) 
 Here is how much of TeX's memory you used:
- 5321 strings out of 481239
- 76710 string characters out of 5920377
+ 5323 strings out of 481239
+ 76744 string characters out of 5920377
  516670 words of memory out of 5000000
- 20521 multiletter control sequences out of 15000+600000
+ 20523 multiletter control sequences out of 15000+600000
  574267 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,11n,60p,640b,318s stack positions out of 5000i,500n,10000p,200000b,80000s
