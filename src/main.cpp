@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 #include "../includes/conta.h"
 #include "../includes/Lista.hpp"
@@ -10,13 +9,13 @@
 #include "../includes/transacao.h"
 
 int main() {
+
     Pessoa p1("josé", "123.456.789-09");
-    ContaComum c1(190521, p1, 750.00f);
-
     Pessoa p2("maria", "001.456.789-99");
-    ContaPoupanca c2(1255534, p2, 1000.00f);
-
     Pessoa p3("lucia", "002.456.789-88");
+
+    ContaComum c1(190521, p1, 750.00f);
+    ContaPoupanca c2(1255534, p2, 1000.00f);
     ContaEspecial c3(123456, p3, 0.00, 1000);
 
     //template e sobrecarga de operador
@@ -28,7 +27,7 @@ int main() {
 
     std::cout << lista;
 
-    /*Herança e Polimorfismo--------------------*/
+    /*Polimorfismo--------------------*/
     Transacao t1;
 
     t1.realizarTransacao(c1, 100.00, "Pagamento Telefone", 0, c1.getSaldo());

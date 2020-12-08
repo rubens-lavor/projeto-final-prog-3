@@ -36,7 +36,7 @@ void Transacao::extrato(Conta &c1, std::string _senha ) const {
     bool validacao = c1.validacao(_senha);
     int num_conta = c1.getNumero();
 
-    std::cout << "\n\n-----------------------------------------" << std::endl;
+    std::cout << "\n-----------------------------------------" << std::endl;
     std::cout << "Emissão de Extrato:\n";
 
     c1.info();
