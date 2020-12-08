@@ -28,34 +28,35 @@ Este projeto visa demonstrar os principais conceitos de orientação a objeto us
     -Wswitch-default -Wundef -Wno-unused
 
 ## Pré requisitos:
-> C++ igual ou superior a versão 17
+- Compilador GCC instalado versão 8 ou superior
 
-> Compilador GCC instalado
-
-## Verifique se o GCC está instalado na sua máquina:
-Abra o terminal de comando e verifique com o comando abaixo, para verificar a versão do compilador:
+## Verifique a versão do GCC instalado na sua máquina:
+Abra o terminal de comando e verifique com o comando abaixo:
     
->gcc -v
+> gcc -v
 
+---
 
-## Instalando o compilador GCC em distribuições Linux:
+## Instalando o GCC:
+
+### Instalando o compilador GCC em distribuições Linux:
  Sistemas operacionais construídos a partir do núcleo Linux, como o ubunto, já possui GCC instalado por default, porém algumas você precisa instalar a parte como ferramenta, abaixo os comando para instalar no Fedora, OpenSUSE e Ubuntu: 
 
-### Fedora
+#### Fedora
 
 > sudo yum install gcc
 
-### OpenSUSE
+#### OpenSUSE
 
 > sudo zypper in gcc
 
-### Ubuntu
+#### Ubuntu
 
 > sudo apt-get update
 
 > sudo apt-get install gcc
 
-## Para Windows - MinGW:
+### Para Windows - MinGW:
 
 MinGW é um software que inclui um conjunto de arquivos cabeçalho para a API do Windows que permite aos desenvolvedores usar o GCC para criar programas nativos em Windows. Acesse o link abaixo e o download do arquivo mingw-get-setup.exe
 
@@ -67,12 +68,12 @@ https://osdn.net/projects/mingw/releases/
 
 ### Abra a pasta do projeto no terminal, compile com o comando:
 
-    $ make all
+> $ make all
 
 ### Em seguida execute com:
 
 
-    $ ./main
+> $ ./main
 
 
 Todo o projeto foi pensado e programado por
