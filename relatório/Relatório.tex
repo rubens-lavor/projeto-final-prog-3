@@ -7,27 +7,11 @@
 \usepackage{graphicx}
 \usepackage{textcomp}
 \usepackage{xcolor}
+\usepackage{hyperref}
 % Definindo novas cores
 \definecolor{verde}{rgb}{0,0.5,0}
 % Configurando layout para mostrar codigos C++
-\usepackage{listings}
-\lstset{
-  language=C++,
-  basicstyle=\ttfamily\small,
-  keywordstyle=\color{blue},
-  stringstyle=\color{verde},
-  commentstyle=\color{red},
-  extendedchars=true,
-  showspaces=false,
-  showstringspaces=false,
-  numbers=left,
-  numberstyle=\tiny,
-  breaklines=true,
-  backgroundcolor=\color{green!10},
-  breakautoindent=true,
-  captionpos=b,
-  xleftmargin=0pt,
-}
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     
@@ -64,8 +48,8 @@ thaiz.izidoro@grad.ufsc.br}
 \end{IEEEkeywords}
 
 \section{Introdução}
-Este relatório tem como objetivo detalhar o funcionamento
-do algoritmos desenvolvido para simular operações do sistema bancário, feito como trabalho final
+Este relatório tem o objetivo de detalhar o funcionamento
+do algoritmos desenvolvido para simular operações do sistema bancário feito como trabalho final
 para a disciplina de programação 3.
 
 \section{Desenvolvimento}
@@ -159,8 +143,8 @@ O arquivo main.cpp do projeto, exemplifica o uso das classe apresentadas anterio
     \begin{figure}[htbp]
         \centering
         \includegraphics[width=8.8cm]{../img/exec.png}
-        \caption{Flags}
-        \label{fig_Flags}
+        \caption{Saída do Programa}
+        \label{fig_programa}
     \end{figure}
 
     \subsection{Ambiente de Desenvolmento}
@@ -206,51 +190,17 @@ O arquivo main.cpp do projeto, exemplifica o uso das classe apresentadas anterio
 
 \section{Conclusão}
 
-A criação do algoritmo do jogo Mastermind foi essencial
-para o entendimento da matéria, ao utilizar os mecanismo do
-C++ aprendidos na disciplina. E por meio dele, também, foi
-possível aprender como estruturar um código e aplicar
-mecanismos que ajudam a torna-lo genérico e bem
-encapsulado.
 
-Criou-se um jogo de batalha-naval com dois n´ıveis de dificuldade, onde o jogador pode escolher entre jogar
-contra o computador, ou contra outra pessoa. Tendo em vista que existem diferentes formas de implementac¸ao de ˜
-codigo, apesar de utilizar n ´ umeros aleat ´ orios para as jogadas ao inv ´ es de alguma estrutura de decis ´ ao, o m ˜ etodo ´
-utilizado para que o computador ataque uma embarcac¸ao inimiga mostra-se satisfat ˜ orio para as dificuldades de jogo ´
-estabelecidas.
+O programa desenvolvido mostrou que atende todos os requisitos propostos, além de apresentar boa performace e atendendo às boas práticas de programação. Referente aos conceitos ensinados durante o semestre, o projeto foi essencial para o entendimento dos mesmos. 
 
-\section*{References}
 
-Please number citations consecutively within brackets \cite{b1}. The 
-sentence punctuation follows the bracket \cite{b2}. Refer simply to the reference 
-number, as in \cite{b3}---do not use ``Ref. \cite{b3}'' or ``reference \cite{b3}'' except at 
-the beginning of a sentence: ``Reference \cite{b3} was the first $\ldots$''
+\section{Referências}
+[1] - Documentação Oficial C++ \url{http://www.cplusplus.com/}
 
-Number footnotes separately in superscripts. Place the actual footnote at 
-the bottom of the column in which it was cited. Do not put footnotes in the 
-abstract or reference list. Use letters for table footnotes.
 
-Unless there are six authors or more give all authors' names; do not use 
-``et al.''. Papers that have not been published, even if they have been 
-submitted for publication, should be cited as ``unpublished'' \cite{b4}. Papers 
-that have been accepted for publication should be cited as ``in press'' \cite{b5}. 
-Capitalize only the first word in a paper title, except for proper nouns and 
-element symbols.
+[2] - Documentação Microsoft da linguagem C++ \url{https://docs.microsoft.com/pt-br/cpp/?view=msvc-160}
 
-For papers published in translation journals, please give the English 
-citation first, followed by the original foreign-language citation \cite{b6}.
 
-\begin{thebibliography}{00}
-\bibitem{b1} G. Eason, B. Noble, and I. N. Sneddon, ``On certain integrals of Lipschitz-Hankel type involving products of Bessel functions,'' Phil. Trans. Roy. Soc. London, vol. A247, pp. 529--551, April 1955.
-\bibitem{b2} J. Clerk Maxwell, A Treatise on Electricity and Magnetism, 3rd ed., vol. 2. Oxford: Clarendon, 1892, pp.68--73.
-\bibitem{b3} I. S. Jacobs and C. P. Bean, ``Fine particles, thin films and exchange anisotropy,'' in Magnetism, vol. III, G. T. Rado and H. Suhl, Eds. New York: Academic, 1963, pp. 271--350.
-\bibitem{b4} K. Elissa, ``Title of paper if known,'' unpublished.
-\bibitem{b5} R. Nicole, ``Title of paper with only first word capitalized,'' J. Name Stand. Abbrev., in press.
-\bibitem{b6} Y. Yorozu, M. Hirano, K. Oka, and Y. Tagawa, ``Electron spectroscopy studies on magneto-optical media and plastic substrate interface,'' IEEE Transl. J. Magn. Japan, vol. 2, pp. 740--741, August 1987 [Digests 9th Annual Conf. Magnetics Japan, p. 301, 1982].
-\bibitem{b7} M. Young, The Technical Writer's Handbook. Mill Valley, CA: University Science, 1989.
-\end{thebibliography}
-\vspace{12pt}
-\color{red}
-IEEE conference templates contain guidance text for composing and formatting conference papers. Please ensure that all template text is removed from your conference paper prior to submission to the conference. Failure to remove the template text from your paper may result in your paper not being published.
+[3] - Wikilivros - \url{https://pt.wikibooks.org/wiki/Programar_em_C%2B%2B}
 
 \end{document}
