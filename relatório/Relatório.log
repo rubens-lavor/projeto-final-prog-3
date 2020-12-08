@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.6.25)  8 DEC 2020 01:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.6.25)  8 DEC 2020 02:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -315,52 +315,75 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip55
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+) (/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count275
+\U@D=\dimen173
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count276
+)
+Package babel Info: \l@brazil = using hyphenrules for portuguese
+(babel)             (\language43) on input line 113.
+Package babel Info: Making " an active character on input line 145.
+)) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count275
+\l__kernel_color_stack_int=\count277
 \l__pdf_internal_box=\box49
 ) (/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.aux)
 \openout1 = `Relatório.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 -- Lines per column: 56 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count276
-\scratchdimen=\dimen173
+\scratchcounter=\count278
+\scratchdimen=\dimen174
 \scratchbox=\box50
-\nofMPsegments=\count277
-\nofMParguments=\count278
+\nofMPsegments=\count279
+\nofMParguments=\count280
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count279
-\MPscratchDim=\dimen174
-\MPnumerator=\count280
-\makeMPintoPDFobject=\count281
+\MPscratchCnt=\count281
+\MPscratchDim=\dimen175
+\MPnumerator=\count282
+\makeMPintoPDFobject=\count283
 \everyMPtoPDFconversion=\toks22
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \AtBeginShipoutBox=\box51
-Package hyperref Info: Link coloring OFF on input line 18.
+Package hyperref Info: Link coloring OFF on input line 19.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -368,17 +391,17 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count282
+\c@section@level=\count284
 )
-LaTeX Info: Redefining \ref on input line 18.
-LaTeX Info: Redefining \pageref on input line 18.
-LaTeX Info: Redefining \nameref on input line 18.
+LaTeX Info: Redefining \ref on input line 19.
+LaTeX Info: Redefining \pageref on input line 19.
+LaTeX Info: Redefining \nameref on input line 19.
  (/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.out) (/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.out)
 \@outlinefile=\write3
 \openout3 = `Relatório.out'.
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 46--48
+Underfull \hbox (badness 1430) in paragraph at lines 47--49
 []\OT1/ptm/b/it/9 Index Terms\OT1/ptm/b/n/9 ---C++, Programa[][]ao, Orienta[][]ao a Ob-je-tos,
  []
 
@@ -401,11 +424,11 @@ Underfull \hbox (badness 2781) in paragraph at lines 69--76
 
 
  <../img/Conta.png> <../img/Pessoa.png>]
-<../img/ContaPoupanca.png, id=70, 766.865pt x 308.15125pt>
+<../img/ContaPoupanca.png, id=70, 766.865pt x 305.14pt>
 File: ../img/ContaPoupanca.png Graphic file (type png)
 <use ../img/ContaPoupanca.png>
 Package pdftex.def Info: ../img/ContaPoupanca.png  used on input line 79.
-(pdftex.def)             Requested size: 250.38434pt x 100.60875pt.
+(pdftex.def)             Requested size: 250.38434pt x 99.62561pt.
 
 Underfull \hbox (badness 5622) in paragraph at lines 76--83
 []\OT1/ptm/b/n/10 Heran[]a\OT1/ptm/m/n/10 : Heran[]a []e um dos pon-tos chave de
@@ -413,7 +436,7 @@ Underfull \hbox (badness 5622) in paragraph at lines 76--83
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 76--83
-\OT1/ptm/m/n/10 programa[][]ao ori-en-tada a ob-je-tos. Ela fornece
+\OT1/ptm/m/n/10 programa[][]ao ori-en-tada a ob-je-tos. Ela for-nece
  []
 
 <../img/Movimento.png, id=71, 371.3875pt x 214.8025pt>
@@ -439,11 +462,11 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 122.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [2 <../img/ContaPoupanca.png> <../img/Movimento.png> <../img/Transacao.png> <../img/Lista.png>]
-<../img/main.png, id=88, 709.65125pt x 752.8125pt>
+<../img/main.png, id=88, 704.6325pt x 751.80875pt>
 File: ../img/main.png Graphic file (type png)
 <use ../img/main.png>
 Package pdftex.def Info: ../img/main.png  used on input line 135.
-(pdftex.def)             Requested size: 250.38434pt x 265.6134pt.
+(pdftex.def)             Requested size: 250.38434pt x 267.14061pt.
 <../img/exec.png, id=89, 803.0pt x 1038.88126pt>
 File: ../img/exec.png Graphic file (type png)
 <use ../img/exec.png>
@@ -451,7 +474,7 @@ Package pdftex.def Info: ../img/exec.png  used on input line 145.
 (pdftex.def)             Requested size: 250.38434pt x 323.93625pt.
 
 Underfull \hbox (badness 3568) in paragraph at lines 160--162
-[]\OT1/ptm/m/n/10 Flags us-adas na compila[][]ao do pro-jeto: -std=c++17
+[]\OT1/ptm/m/n/10 Flags usa-das na compila[][]ao do pro-jeto: -std=c++17
  []
 
 
@@ -513,15 +536,15 @@ Package rerunfilecheck Info: File `Relatório.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
  ) 
 Here is how much of TeX's memory you used:
- 7904 strings out of 481239
- 119917 string characters out of 5920377
- 391754 words of memory out of 5000000
- 23000 multiletter control sequences out of 15000+600000
+ 8543 strings out of 481239
+ 129166 string characters out of 5920377
+ 412767 words of memory out of 5000000
+ 23617 multiletter control sequences out of 15000+600000
  564511 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,8n,37p,661b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,8n,37p,661b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.pdf" (4 pages, 840957 bytes).
+Output written on "/home/rubens/Documentos/C++/c++ projeto/banco/relatório/Relatório.pdf" (4 pages, 838896 bytes).
 PDF statistics:
  149 PDF objects out of 1000 (max. 8388607)
  113 compressed objects within 2 object streams
